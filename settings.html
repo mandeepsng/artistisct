@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brush Cursor Styles Demo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .header h1 {
+            color: #333;
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+        }
+
+        .header p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        .cursor-selector {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+        .cursor-selector h2 {
+            color: #333;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .cursor-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .cursor-option {
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 1.5rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: #f9f9f9;
+        }
+
+        .cursor-option:hover {
+            border-color: #007bff;
+            background: #f0f8ff;
+            transform: translateY(-3px);
+        }
+
+        .cursor-option.active {
+            border-color: #007bff;
+            background: #e3f2fd;
+        }
+
+        .cursor-preview {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 1rem;
+            background: #f0f0f0;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+        }
+
+        .cursor-name {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .cursor-description {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .demo-area {
+            background: white;
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .demo-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .demo-item {
+            padding: 2rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .demo-item:hover {
+            transform: scale(1.05);
+        }
+
+        .code-section {
+            background: #1e1e1e;
+            color: #f8f8f2;
+            padding: 2rem;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+            font-family: 'Courier New', monospace;
+        }
+
+        .code-section h3 {
+            color: #66d9ef;
+            margin-bottom: 1rem;
+        }
+
+        .code-block {
+            background: #2d2d2d;
+            padding: 1rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .highlight {
+            color: #a6e22e;
+        }
+
+        .string {
+            color: #e6db74;
+        }
+
+        .comment {
+            color: #75715e;
+            font-style: italic;
+        }
+
+        .brush-trail {
+            position: fixed;
+            width: 8px;
+            height: 8px;
+            background: #007bff;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.6;
+            animation: brushFade 1.2s ease-out forwards;
+        }
+
+        @keyframes brushFade {
+            0% { 
+                opacity: 0.6; 
+                transform: scale(1); 
+            }
+            100% { 
+                opacity: 0; 
+                transform: scale(0.2); 
+            }
+        }
+
+        /* Default brush cursor styles */
+        .brush-basic {
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23007bff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9.06 11.9 8.07-8.06a2.85 2.85 0 1 1 4.03 4.03l-8.06 8.08"/><path d="m15 5 4 4"/><path d="m2 21 6-6 4 4-6 6"/><path d="m5 19 4-4"/></svg>') 2 22, auto;
+        }
+
+        .brush-artistic {
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="%23d4830a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18.37 2.63 14 7l-1.59-1.59a2 2 0 0 0-2.82 0L8 7l9 9 1.59-1.59a2 2 0 0 0 0-2.82L17 10l4.37-4.37a2.12 2.12 0 1 0-3-3Z"/><path d="M9 8c-2 3-4 3.5-7 4l8 10c2-1 6-5 6-7"/><path d="M14.5 17.5 4.5 15"/></svg>') 4 28, auto;
+        }
+
+        .brush-pencil {
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 2 4 4-14 14H4v-4L18 2z"/><path d="M14.5 5.5 18.5 9.5"/></svg>') 2 22, auto;
+        }
+
+        .brush-pen {
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="m18 13-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="m2 2 7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>') 12 19, auto;
+        }
+
+        .brush-marker {
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="%23ff6b35" stroke="%23ff6b35" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 5 4 4"/><path d="M13 7 8.7 2.7a2.41 2.41 0 0 0-3.4 0L2.7 5.3a2.41 2.41 0 0 0 0 3.4L7 13"/><path d="m8 6 2-2"/><path d="m2 22 5.5-1.5L21.17 6.83a2.82 2.82 0 0 0-4-4L3.5 16.5 2 22Z"/></svg>') 14 14, auto;
+        }
+
+        .brush-spray {
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="%236c5ce7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/><circle cx="20" cy="4" r="2"/><circle cx="20" cy="8" r="2"/><circle cx="16" cy="4" r="2"/></svg>') 14 14, auto;
+        }
+
+        .brush-calligraphy {
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="%23a855f7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-5c-.6 0-1-.4-1-1V3c0-.6.4-1 1-1h2a2 2 0 0 1 2 2z"/><polyline points="6,8 10,12 6,16"/></svg>') 16 16, auto;
+        }
+
+        .brush-watercolor {
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="%2300b8d4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/><path d="M12 8v8"/><path d="m8.5 8.5 7 7"/><path d="m15.5 8.5-7 7"/></svg>') 15 15, auto;
+        }
+    </style>
+</head>
+<body class="brush-basic">
+    <div class="container">
+        <div class="header">
+            <h1>🎨 Brush Cursor Styles Demo</h1>
+            <p>Choose your favorite artistic cursor style and see the code behind it!</p>
+        </div>
+
+        <div class="cursor-selector">
+            <h2>Select Cursor Style</h2>
+            <div class="cursor-grid">
+                <div class="cursor-option active" data-cursor="brush-basic">
+                    <div class="cursor-preview">🖌️</div>
+                    <div class="cursor-name">Basic Brush</div>
+                    <div class="cursor-description">Classic paint brush for general use</div>
+                </div>
+
+                <div class="cursor-option" data-cursor="brush-artistic">
+                    <div class="cursor-preview">🎨</div>
+                    <div class="cursor-name">Artistic Brush</div>
+                    <div class="cursor-description">Professional artist's brush</div>
+                </div>
+
+                <div class="cursor-option" data-cursor="brush-pencil">
+                    <div class="cursor-preview">✏️</div>
+                    <div class="cursor-name">Pencil</div>
+                    <div class="cursor-description">Classic drawing pencil</div>
+                </div>
+
+                <div class="cursor-option" data-cursor="brush-pen">
+                    <div class="cursor-preview">🖊️</div>
+                    <div class="cursor-name">Ink Pen</div>
+                    <div class="cursor-description">Professional writing pen</div>
+                </div>
+
+                <div class="cursor-option" data-cursor="brush-marker">
+                    <div class="cursor-preview">🖍️</div>
+                    <div class="cursor-name">Marker</div>
+                    <div class="cursor-description">Bold marker for highlights</div>
+                </div>
+
+                <div class="cursor-option" data-cursor="brush-spray">
+                    <div class="cursor-preview">💨</div>
+                    <div class="cursor-name">Spray Paint</div>
+                    <div class="cursor-description">Graffiti-style spray paint</div>
+                </div>
+
+                <div class="cursor-option" data-cursor="brush-calligraphy">
+                    <div class="cursor-preview">📝</div>
+                    <div class="cursor-name">Calligraphy</div>
+                    <div class="cursor-description">Elegant calligraphy brush</div>
+                </div>
+
+                <div class="cursor-option" data-cursor="brush-watercolor">
+                    <div class="cursor-preview">🌈</div>
+                    <div class="cursor-name">Watercolor</div>
+                    <div class="cursor-description">Soft watercolor brush</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="demo-area">
+            <h2>Try Your Cursor Here!</h2>
+            <p>Move your mouse around and click on the cards below to test the brush cursor</p>
+            <div class="demo-content">
+                <div class="demo-item">
+                    <h3>Hover Me</h3>
+                    <p>Test the cursor movement</p>
+                </div>
+                <div class="demo-item">
+                    <h3>Click Me</h3>
+                    <p>See the cursor in action</p>
+                </div>
+                <div class="demo-item">
+                    <h3>Drag Me</h3>
+                    <p>Experience brush trails</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="code-section">
+            <h3>📄 Current Cursor CSS Code:</h3>
+            <div class="code-block" id="cursor-code">
+<span class="comment">/* Basic Brush Cursor */</span>
+<span class="highlight">body</span> {
+    <span class="highlight">cursor</span>: <span class="string">url('data:image/svg+xml;utf8,&lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23007bff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">&lt;path d="m9.06 11.9 8.07-8.06a2.85 2.85 0 1 1 4.03 4.03l-8.06 8.08"/>&lt;path d="m15 5 4 4"/>&lt;path d="m2 21 6-6 4 4-6 6"/>&lt;path d="m5 19 4-4"/>&lt;/svg>') 2 22, auto</span>;
+}
+            </div>
+        </div>
+
+        <div class="code-section">
+            <h3>🔧 How to Implement Custom Cursors:</h3>
+            <div class="code-block">
+<span class="comment">/* Step 1: Define your SVG cursor */</span>
+<span class="highlight">.custom-cursor</span> {
+    <span class="highlight">cursor</span>: <span class="string">url('data:image/svg+xml;utf8,&lt;svg&gt;...&lt;/svg&gt;') X Y, fallback</span>;
+}
+
+<span class="comment">/* Step 2: X Y are hotspot coordinates (where the click point is) */</span>
+<span class="comment">/* Step 3: Always include a fallback cursor */</span>
+
+<span class="comment">/* Different cursors for different elements */</span>
+<span class="highlight">button, a</span> {
+    <span class="highlight">cursor</span>: <span class="string">url('...') X Y, pointer</span>;
+}
+
+<span class="highlight">input, textarea</span> {
+    <span class="highlight">cursor</span>: <span class="string">url('...') X Y, text</span>;
+}
+            </div>
+        </div>
+
+        <div class="code-section">
+            <h3>✨ Brush Trail Effect JavaScript:</h3>
+            <div class="code-block">
+<span class="comment">// Create brush trail effect</span>
+<span class="highlight">document</span>.<span class="highlight">addEventListener</span>(<span class="string">'mousemove'</span>, (<span class="highlight">e</span>) => {
+    <span class="highlight">const</span> trail = <span class="highlight">document</span>.<span class="highlight">createElement</span>(<span class="string">'div'</span>);
+    trail.<span class="highlight">className</span> = <span class="string">'brush-trail'</span>;
+    trail.<span class="highlight">style</span>.<span class="highlight">left</span> = e.<span class="highlight">clientX</span> - <span class="string">4</span> + <span class="string">'px'</span>;
+    trail.<span class="highlight">style</span>.<span class="highlight">top</span> = e.<span class="highlight">clientY</span> - <span class="string">4</span> + <span class="string">'px'</span>;
+    
+    <span class="comment">// Add randomness for organic feel</span>
+    <span class="highlight">const</span> offsetX = (<span class="highlight">Math</span>.<span class="highlight">random</span>() - <span class="string">0.5</span>) * <span class="string">6</span>;
+    <span class="highlight">const</span> offsetY = (<span class="highlight">Math</span>.<span class="highlight">random</span>() - <span class="string">0.5</span>) * <span class="string">6</span>;
+    trail.<span class="highlight">style</span>.<span class="highlight">transform</span> = <span class="string">`translate(${offsetX}px, ${offsetY}px)`</span>;
+    
+    <span class="highlight">document</span>.<span class="highlight">body</span>.<span class="highlight">appendChild</span>(trail);
+    
+    <span class="comment">// Remove after animation</span>
+    <span class="highlight">setTimeout</span>(() => {
+        <span class="highlight">if</span> (trail.<span class="highlight">parentNode</span>) {
+            trail.<span class="highlight">remove</span>();
+        }
+    }, <span class="string">1200</span>);
+});
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Cursor selection functionality
+        const cursorOptions = document.querySelectorAll('.cursor-option');
+        const body = document.body;
+        const codeBlock = document.getElementById('cursor-code');
+
+        const cursorCodes = {
+            'brush-basic': `<span class="comment">/* Basic Brush Cursor */</span>
+<span class="highlight">body</span> {
+    <span class="highlight">cursor</span>: <span class="string">url('data:image/svg+xml;utf8,&lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23007bff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">&lt;path d="m9.06 11.9 8.07-8.06a2.85 2.85 0 1 1 4.03 4.03l-8.06 8.08"/>&lt;path d="m15 5 4 4"/>&lt;path d="m2 21 6-6 4 4-6 6"/>&lt;path d="m5 19 4-4"/>&lt;/svg>') 2 22, auto</span>;
+}`,
+            'brush-artistic': `<span class="comment">/* Artistic Brush Cursor */</span>
+<span class="highlight">body</span> {
+    <span class="highlight">cursor</span>: <span class="string">url('data:image/svg+xml;utf8,&lt;svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="%23d4830a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">&lt;path d="M18.37 2.63 14 7l-1.59-1.59a2 2 0 0 0-2.82 0L8 7l9 9 1.59-1.59a2 2 0 0 0 0-2.82L17 10l4.37-4.37a2.12 2.12 0 1 0-3-3Z"/>&lt;path d="M9 8c-2 3-4 3.5-7 4l8 10c2-1 6-5 6-7"/>&lt;path d="M14.5 17.5 4.5 15"/>&lt;/svg>') 4 28, auto</span>;
+}`,
+            'brush-pencil': `<span class="comment">/* Pencil Cursor */</span>
+<span class="highlight">body</span> {
+    <span class="highlight">cursor</span>: <span class="string">url('data:image/svg+xml;utf8,&lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">&lt;path d="m18 2 4 4-14 14H4v-4L18 2z"/>&lt;path d="M14.5 5.5 18.5 9.5"/>&lt;/svg>') 2 22, auto</span>;
+}`,
+            'brush-pen': `<span class="comment">/* Ink Pen Cursor */</span>
+<span class="highlight">body</span> {
+    <span class="highlight">cursor</span>: <span class="string">url('data:image/svg+xml;utf8,&lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">&lt;path d="M12 19l7-7 3 3-7 7-3-3z"/>&lt;path d="m18 13-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/>&lt;path d="m2 2 7.586 7.586"/>&lt;circle cx="11" cy="11" r="2"/>&lt;/svg>') 12 19, auto</span>;
+}`,
+            'brush-marker': `<span class="comment">/* Marker Cursor */</span>
+<span class="highlight">body</span> {
+    <span class="highlight">cursor</span>: <span class="string">url('data:image/svg+xml;utf8,&lt;svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="%23ff6b35" stroke="%23ff6b35" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">&lt;path d="m15 5 4 4"/>&lt;path d="M13 7 8.7 2.7a2.41 2.41 0 0 0-3.4 0L2.7 5.3a2.41 2.41 0 0 0 0 3.4L7 13"/>&lt;path d="m8 6 2-2"/>&lt;path d="m2 22 5.5-1.5L21.17 6.83a2.82 2.82 0 0 0-4-4L3.5 16.5 2 22Z"/>&lt;/svg>') 14 14, auto</span>;
+}`,
+            'brush-spray': `<span class="comment">/* Spray Paint Cursor */</span>
+<span class="highlight">body</span> {
+    <span class="highlight">cursor</span>: <span class="string">url('data:image/svg+xml;utf8,&lt;svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="%236c5ce7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">&lt;path d="M3 3v18h18"/>&lt;path d="m19 9-5 5-4-4-3 3"/>&lt;circle cx="20" cy="4" r="2"/>&lt;circle cx="20" cy="8" r="2"/>&lt;circle cx="16" cy="4" r="2"/>&lt;/svg>') 14 14, auto</span>;
+}`,
+            'brush-calligraphy': `<span class="comment">/* Calligraphy Brush Cursor */</span>
+<span class="highlight">body</span> {
+    <span class="highlight">cursor</span>: <span class="string">url('data:image/svg+xml;utf8,&lt;svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="%23a855f7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">&lt;path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-5c-.6 0-1-.4-1-1V3c0-.6.4-1 1-1h2a2 2 0 0 1 2 2z"/>&lt;polyline points="6,8 10,12 6,16"/>&lt;/svg>') 16 16, auto</span>;
+}`,
+            'brush-watercolor': `<span class="comment">/* Watercolor Brush Cursor */</span>
+<span class="highlight">body</span> {
+    <span class="highlight">cursor</span>: <span class="string">url('data:image/svg+xml;utf8,&lt;svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="%2300b8d4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">&lt;circle cx="12" cy="12" r="10"/>&lt;path d="M8 12h8"/>&lt;path d="M12 8v8"/>&lt;path d="m8.5 8.5 7 7"/>&lt;path d="m15.5 8.5-7 7"/>&lt;/svg>') 15 15, auto</span>;
+}`
+        };
+
+        cursorOptions.forEach(option => {
+            option.addEventListener('click', () => {
+                // Remove active class from all options
+                cursorOptions.forEach(opt => opt.classList.remove('active'));
+                
+                // Add active class to clicked option
+                option.classList.add('active');
+                
+                // Remove all cursor classes from body
+                body.className = body.className.replace(/brush-\w+/g, '');
+                
+                // Add new cursor class
+                const cursorClass = option.dataset.cursor;
+                body.classList.add(cursorClass);
+                
+                // Update code block
+                codeBlock.innerHTML = cursorCodes[cursorClass];
+            });
+        });
+
+        // Brush trail effect
+        let brushTrailTimeout;
+        document.addEventListener('mousemove', (e) => {
+            if (window.innerWidth > 768) {
+                clearTimeout(brushTrailTimeout);
+                brushTrailTimeout = setTimeout(() => {
+                    const trail = document.createElement('div');
+                    trail.className = 'brush-trail';
+                    trail.style.left = e.clientX - 4 + 'px';
+                    trail.style.top = e.clientY - 4 + 'px';
+                    
+                    // Add slight randomness
+                    const offsetX = (Math.random() - 0.5) * 6;
+                    const offsetY = (Math.random() - 0.5) * 6;
+                    trail.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
+                    
+                    document.body.appendChild(trail);
+                    
+                    setTimeout(() => {
+                        if (trail.parentNode) {
+                            trail.remove();
+                        }
+                    }, 1200);
+                }, 50);
+            }
+        });
+
+        // Demo item click effects
+        document.querySelectorAll('.demo-item').forEach(item => {
+            item.addEventListener('click', function(e) {
+                // Create paint splatter effect
+                for (let i = 0; i < 6; i++) {
+                    setTimeout(() => {
+                        const splatter = document.createElement('div');
+                        const size = Math.random() * 10 + 4;
+                        const angle = (Math.PI * 2 * i) / 6;
+                        const distance = Math.random() * 30 + 15;
+                        
+                        splatter.style.cssText = `
+                            position: fixed;
+                            top: ${e.clientY + Math.sin(angle) * distance}px;
+                            left: ${e.clientX + Math.cos(angle) * distance}px;
+                            width: ${size}px;
+                            height: ${size}px;
+                            background: #007bff;
+                            border-radius: ${Math.random() > 0.5 ? '50%' : '30%'};
+                            pointer-events: none;
+                            z-index: 9999;
+                            opacity: 0.7;
+                            animation: brushFade 1.5s ease-out forwards;
+                        `;
+                        document.body.appendChild(splatter);
+                        
+                        setTimeout(() => {
+                            if (splatter.parentNode) {
+                                splatter.remove();
+                            }
+                        }, 1500);
+                    }, i * 30);
+                }
+            });
+        });
+
+        // Copy code functionality
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text.replace(/<[^>]*>/g, '')).then(() => {
+                // Show copy notification
+                const notification = document.createElement('div');
+                notification.textContent = 'Code copied to clipboard!';
+                notification.style.cssText = `
+                    position: fixed;
+                    top: 20px;
+                    right: 20px;
+                    background: #4CAF50;
+                    color: white;
+                    padding: 10px 20px;
+                    border-radius: 5px;
+                    z-index: 10000;
+                    animation: slideIn 0.3s ease;
+                `;
+                document.body.appendChild(notification);
+                
+                setTimeout(() => {
+                    notification.remove();
+                }, 2000);
+            });
+        }
+
+        // Add copy buttons to code blocks
+        document.querySelectorAll('.code-block').forEach(block => {
+            const copyBtn = document.createElement('button');
+            copyBtn.textContent = '📋 Copy';
+            copyBtn.style.cssText = `
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                background: #007bff;
+                color: white;
+                border: none;
+                padding: 5px 10px;
+                border-radius: 3px;
+                cursor: pointer;
+                font-size: 0.8rem;
+            `;
+            
+            const container = block.parentElement;
+            container.style.position = 'relative';
+            container.appendChild(copyBtn);
+            
+            copyBtn.addEventListener('click', () => {
+                copyToClipboard(block.textContent);
+            });
+        });
+
+        // Add slide-in animation for notifications
+        const notificationStyle = document.createElement('style');
+        notificationStyle.textContent = `
+            @keyframes slideIn {
+                from { transform: translateX(100%); opacity: 0; }
+                to { transform: translateX(0); opacity: 1; }
+            }
+        `;
+        document.head.appendChild(notificationStyle);
+    </script>
+</body>
+</html>
