@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gur Jass Arts Logo Variations</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #fffcf7 0%, #fdf8f0 100%);
+            margin: 0;
+            padding: 2rem;
+            color: #2c2c2c;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            font-family: 'Crimson Text', serif;
+            font-size: 2.5rem;
+            color: #ff9933;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .logo-section {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(255, 153, 51, 0.1);
+        }
+        
+        .logo-title {
+            font-family: 'Crimson Text', serif;
+            font-size: 1.5rem;
+            color: #8b5a2b;
+            margin-bottom: 1rem;
+        }
+        
+        .logo-description {
+            color: #6b6b6b;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 200px;
+            background: #fdf8f0;
+            border-radius: 10px;
+            padding: 2rem;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .usage-note {
+            background: #ff9933;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            display: inline-block;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Gur Jass Arts Logo Variations</h1>
+        
+        <!-- Original Vertical Logo -->
+        <div class="logo-section">
+            <h2 class="logo-title">1. Main Logo with Indian Motifs</h2>
+            <p class="logo-description">The primary logo featuring traditional Indian elements - lotus, mandala patterns, and saffron colors representing cultural heritage.</p>
+            <div class="logo-container">
+                <svg viewBox="0 0 350 140" width="350" height="140" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="saffronGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#ff9933;stop-opacity:1" />
+                            <stop offset="50%" style="stop-color:#ffb347;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#e6740a;stop-opacity:1" />
+                        </linearGradient>
+                        <linearGradient id="lotusGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#fdb462;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#cc4400;stop-opacity:1" />
+                        </linearGradient>
+                        <linearGradient id="textGradient1" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#8b5a2b;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#ff9933;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    
+                    <!-- Mandala background -->
+                    <g transform="translate(50,70)" opacity="0.3">
+                        <circle cx="0" cy="0" r="35" fill="none" stroke="#ff9933" stroke-width="1"/>
+                        <circle cx="0" cy="0" r="25" fill="none" stroke="#ffb347" stroke-width="1"/>
+                        <circle cx="0" cy="0" r="15" fill="none" stroke="#e6740a" stroke-width="1"/>
+                        <circle cx="0" cy="0" r="8" fill="#ff9933" opacity="0.5">
+                            <animate attributeName="opacity" values="0.5;0.8;0.5" dur="3s" repeatCount="indefinite"/>
+                        </circle>
+                    </g>
+                    
+                    <!-- Lotus flower -->
+                    <g transform="translate(50,55)">
+                        <!-- Lotus petals -->
+                        <ellipse cx="0" cy="5" rx="8" ry="20" fill="url(#lotusGradient1)" transform="rotate(0)" opacity="0.9"/>
+                        <ellipse cx="0" cy="5" rx="8" ry="20" fill="url(#lotusGradient1)" transform="rotate(45)" opacity="0.8"/>
+                        <ellipse cx="0" cy="5" rx="8" ry="20" fill="url(#lotusGradient1)" transform="rotate(90)" opacity="0.9"/>
+                        <ellipse cx="0" cy="5" rx="8" ry="20" fill="url(#lotusGradient1)" transform="rotate(135)" opacity="0.8"/>
+                        <ellipse cx="0" cy="5" rx="8" ry="20" fill="url(#lotusGradient1)" transform="rotate(180)" opacity="0.9"/>
+                        <ellipse cx="0" cy="5" rx="8" ry="20" fill="url(#lotusGradient1)" transform="rotate(225)" opacity="0.8"/>
+                        <ellipse cx="0" cy="5" rx="8" ry="20" fill="url(#lotusGradient1)" transform="rotate(270)" opacity="0.9"/>
+                        <ellipse cx="0" cy="5" rx="8" ry="20" fill="url(#lotusGradient1)" transform="rotate(315)" opacity="0.8"/>
+                        
+                        <!-- Lotus center -->
+                        <circle cx="0" cy="5" r="6" fill="#ff9933" opacity="0.9">
+                            <animate attributeName="opacity" values="0.9;1;0.9" dur="4s" repeatCount="indefinite"/>
+                        </circle>
+                        <circle cx="0" cy="5" r="3" fill="#ffb347" opacity="0.8"/>
+                    </g>
+                    
+                    <!-- Decorative dots -->
+                    <circle cx="25" cy="35" r="2" fill="#ff9933" opacity="0.7">
+                        <animate attributeName="opacity" values="0.7;0.3;0.7" dur="2s" repeatCount="indefinite"/>
+                    </circle>
+                    <circle cx="75" cy="45" r="1.5" fill="#ffb347" opacity="0.6">
+                        <animate attributeName="opacity" values="0.6;0.3;0.6" dur="3s" repeatCount="indefinite"/>
+                    </circle>
+                    
+                    <!-- Paisley decoration -->
+                    <path d="M 20 95 Q 35 85 40 100 Q 35 110 20 100 Q 15 95 20 95" fill="#fdb462" opacity="0.4"/>
+                    
+                    <!-- Main text: "Gur Jass" -->
+                    <text x="120" y="45" font-family="Crimson Text, serif" font-size="32" font-weight="600" fill="url(#textGradient1)">Gur Jass</text>
+                    
+                    <!-- Decorative line -->
+                    <line x1="120" y1="55" x2="270" y2="55" stroke="#ff9933" stroke-width="2" opacity="0.6"/>
+                    <circle cx="130" cy="55" r="2" fill="#ffb347"/>
+                    <circle cx="260" cy="55" r="2" fill="#e6740a"/>
+                    
+                    <!-- Subtitle: "Arts" -->
+                    <text x="120" y="80" font-family="Crimson Text, serif" font-size="24" font-weight="400" fill="url(#textGradient1)">Arts</text>
+                    
+                    <!-- Tagline -->
+                    <text x="120" y="100" font-family="Inter, sans-serif" font-size="12" font-weight="300" font-style="italic" fill="#8b5a2b" opacity="0.8">Contemporary Indian Artist</text>
+                    
+                    <!-- Right side decoration -->
+                    <g transform="translate(300,70)" opacity="0.5">
+                        <circle cx="0" cy="0" r="15" fill="none" stroke="#ff9933" stroke-width="1"/>
+                        <path d="M -8 -8 L 8 8 M 8 -8 L -8 8" stroke="#ffb347" stroke-width="1"/>
+                    </g>
+                </svg>
+            </div>
+            <span class="usage-note">Best for: Website headers, business cards, main branding</span>
+        </div>
+
+        <div class="grid">
+            <!-- Horizontal Logo -->
+            <div class="logo-section">
+                <h2 class="logo-title">2. Horizontal Layout</h2>
+                <p class="logo-description">Streamlined horizontal version perfect for letterheads and email signatures.</p>
+                <div class="logo-container">
+                    <svg viewBox="0 0 450 90" width="450" height="90" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="saffronGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#ff9933;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#e6740a;stop-opacity:1" />
+                            </linearGradient>
+                            <linearGradient id="textGradient2" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" style="stop-color:#8b5a2b;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#ff9933;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        
+                        <!-- Simplified lotus -->
+                        <g transform="translate(45,45)">
+                            <ellipse cx="0" cy="0" rx="6" ry="15" fill="#ff9933" transform="rotate(0)" opacity="0.9"/>
+                            <ellipse cx="0" cy="0" rx="6" ry="15" fill="#ffb347" transform="rotate(60)" opacity="0.8"/>
+                            <ellipse cx="0" cy="0" rx="6" ry="15" fill="#ff9933" transform="rotate(120)" opacity="0.9"/>
+                            <circle cx="0" cy="0" r="5" fill="#e6740a" opacity="0.9"/>
+                        </g>
+                        
+                        <!-- Decorative elements -->
+                        <circle cx="25" cy="30" r="1.5" fill="#ff9933" opacity="0.7">
+                            <animate attributeName="opacity" values="0.7;0.3;0.7" dur="2s" repeatCount="indefinite"/>
+                        </circle>
+                        <circle cx="65" cy="35" r="1" fill="#ffb347" opacity="0.6">
+                            <animate attributeName="opacity" values="0.6;0.3;0.6" dur="3s" repeatCount="indefinite"/>
+                        </circle>
+                        
+                        <!-- Text -->
+                        <text x="95" y="40" font-family="Crimson Text, serif" font-size="28" font-weight="600" fill="url(#textGradient2)">Gur Jass Arts</text>
+                        <text x="95" y="60" font-family="Inter, sans-serif" font-size="11" font-weight="300" font-style="italic" fill="#8b5a2b" opacity="0.8">Contemporary Indian Artist</text>
+                        
+                        <!-- Side decoration -->
+                        <path d="M 380 30 Q 390 35 385 45 Q 380 55 390 60" stroke="#ff9933" stroke-width="1.5" fill="none" opacity="0.5"/>
+                    </svg>
+                </div>
+                <span class="usage-note">Best for: Email signatures, letterheads, banners</span>
+            </div>
+
+            <!-- Simplified Icon -->
+            <div class="logo-section">
+                <h2 class="logo-title">3. Icon Version</h2>
+                <p class="logo-description">Clean icon for social media profiles and small applications.</p>
+                <div class="logo-container">
+                    <svg viewBox="0 0 120 120" width="120" height="120" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="saffronGradient3" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#ff9933;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#e6740a;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        
+                        <!-- Background circle -->
+                        <circle cx="60" cy="60" r="55" fill="url(#saffronGradient3)" opacity="0.1"/>
+                        
+                        <!-- Large lotus -->
+                        <g transform="translate(60,60)">
+                            <ellipse cx="0" cy="0" rx="10" ry="25" fill="#ff9933" transform="rotate(0)" opacity="0.9"/>
+                            <ellipse cx="0" cy="0" rx="10" ry="25" fill="#ffb347" transform="rotate(45)" opacity="0.8"/>
+                            <ellipse cx="0" cy="0" rx="10" ry="25" fill="#ff9933" transform="rotate(90)" opacity="0.9"/>
+                            <ellipse cx="0" cy="0" rx="10" ry="25" fill="#ffb347" transform="rotate(135)" opacity="0.8"/>
+                            <circle cx="0" cy="0" r="8" fill="#e6740a" opacity="0.9">
+                                <animate attributeName="opacity" values="0.9;1;0.9" dur="4s" repeatCount="indefinite"/>
+                            </circle>
+                        </g>
+                        
+                        <!-- Decorative dots -->
+                        <circle cx="35" cy="35" r="3" fill="#ff9933" opacity="0.6">
+                            <animate attributeName="opacity" values="0.6;0.3;0.6" dur="2s" repeatCount="indefinite"/>
+                        </circle>
+                        <circle cx="85" cy="40" r="2" fill="#ffb347" opacity="0.7">
+                            <animate attributeName="opacity" values="0.7;0.3;0.7" dur="3s" repeatCount="indefinite"/>
+                        </circle>
+                        <circle cx="40" cy="85" r="2.5" fill="#e6740a" opacity="0.5">
+                            <animate attributeName="opacity" values="0.5;0.3;0.5" dur="2.5s" repeatCount="indefinite"/>
+                        </circle>
+                    </svg>
+                </div>
+                <span class="usage-note">Best for: Social media, app icons, favicons</span>
+            </div>
+
+            <!-- Text-Only Logo -->
+            <div class="logo-section">
+                <h2 class="logo-title">4. Devanagari Script Version</h2>
+                <p class="logo-description">Traditional Devanagari script with English for authentic Indian touch.</p>
+                <div class="logo-container">
+                    <svg viewBox="0 0 320 100" width="320" height="100" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="textGradient4" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" style="stop-color:#8b5a2b;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#ff9933;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        
+                        <!-- Devanagari text (stylized representation) -->
+                        <text x="160" y="30" font-family="serif" font-size="24" font-weight="600" fill="url(#textGradient4)" text-anchor="middle">गुर जस</text>
+                        
+                        <!-- English text -->
+                        <text x="160" y="55" font-family="Crimson Text, serif" font-size="28" font-weight="600" fill="url(#textGradient4)" text-anchor="middle">Gur Jass Arts</text>
+                        
+                        <!-- Decorative line -->
+                        <line x1="80" y1="68" x2="240" y2="68" stroke="#ff9933" stroke-width="1" opacity="0.6"/>
+                        <circle cx="90" cy="68" r="2" fill="#ff9933" opacity="0.7"/>
+                        <circle cx="160" cy="68" r="1.5" fill="#ffb347" opacity="0.8"/>
+                        <circle cx="230" cy="68" r="2" fill="#e6740a" opacity="0.6"/>
+                        
+                        <!-- Subtitle -->
+                        <text x="160" y="85" font-family="Inter, sans-serif" font-size="12" font-weight="300" font-style="italic" fill="#8b5a2b" opacity="0.8" text-anchor="middle">समकालीन कलाकार · Contemporary Artist</text>
+                    </svg>
+                </div>
+                <span class="usage-note">Best for: Cultural events, traditional presentations</span>
+            </div>
+
+            <!-- Mandala Badge Version -->
+            <div class="logo-section">
+                <h2 class="logo-title">5. Mandala Badge</h2>
+                <p class="logo-description">Circular badge with intricate mandala design for stamps and merchandise.</p>
+                <div class="logo-container">
+                    <svg viewBox="0 0 140 140" width="140" height="140" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="badgeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#ff9933;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#cc4400;stop-opacity:1" />
+                            </linearGradient>
+                            <linearGradient id="innerGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#fdf8f0;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#fffcf7;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        
+                        <!-- Outer mandala circle -->
+                        <circle cx="70" cy="70" r="65" fill="url(#badgeGradient)" opacity="0.9"/>
+                        <circle cx="70" cy="70" r="55" fill="url(#innerGradient)"/>
+                        
+                        <!-- Mandala pattern -->
+                        <g transform="translate(70,70)" opacity="0.8">
+                            <circle cx="0" cy="0" r="45" fill="none" stroke="#ff9933" stroke-width="1"/>
+                            <circle cx="0" cy="0" r="35" fill="none" stroke="#ffb347" stroke-width="1"/>
+                            <circle cx="0" cy="0" r="25" fill="none" stroke="#e6740a" stroke-width="1"/>
+                            <circle cx="0" cy="0" r="15" fill="none" stroke="#ff9933" stroke-width="1"/>
+                            
+                            <!-- Petals -->
+                            <g opacity="0.7">
+                                <ellipse cx="0" cy="-20" rx="3" ry="8" fill="#ff9933"/>
+                                <ellipse cx="14" cy="-14" rx="3" ry="8" fill="#ffb347" transform="rotate(45)"/>
+                                <ellipse cx="20" cy="0" rx="3" ry="8" fill="#ff9933" transform="rotate(90)"/>
+                                <ellipse cx="14" cy="14" rx="3" ry="8" fill="#ffb347" transform="rotate(135)"/>
+                                <ellipse cx="0" cy="20" rx="3" ry="8" fill="#ff9933" transform="rotate(180)"/>
+                                <ellipse cx="-14" cy="14" rx="3" ry="8" fill="#ffb347" transform="rotate(225)"/>
+                                <ellipse cx="-20" cy="0" rx="3" ry="8" fill="#ff9933" transform="rotate(270)"/>
+                                <ellipse cx="-14" cy="-14" rx="3" ry="8" fill="#ffb347" transform="rotate(315)"/>
+                            </g>
+                        </g>
+                        
+                        <!-- Central lotus -->
+                        <g transform="translate(70,55)">
+                            <ellipse cx="0" cy="0" rx="4" ry="10" fill="#ff9933" transform="rotate(0)" opacity="0.9"/>
+                            <ellipse cx="0" cy="0" rx="4" ry="10" fill="#ffb347" transform="rotate(60)" opacity="0.8"/>
+                            <ellipse cx="0" cy="0" rx="4" ry="10" fill="#ff9933" transform="rotate(120)" opacity="0.9"/>
+                            <circle cx="0" cy="0" r="4" fill="#e6740a" opacity="0.9">
+                                <animate attributeName="opacity" values="0.9;1;0.9" dur="4s" repeatCount="indefinite"/>
+                            </circle>
+                        </g>
+                        
+                        <!-- Text -->
+                        <text x="70" y="85" font-family="Crimson Text, serif" font-size="14" font-weight="600" fill="#8b5a2b" text-anchor="middle">GJ</text>
+                        <text x="70" y="100" font-family="Inter, sans-serif" font-size="8" font-weight="400" fill="#8b5a2b" text-anchor="middle" opacity="0.8">ARTS</text>
+                    </svg>
+                </div>
+                <span class="usage-note">Best for: Stamps, merchandise, packaging</span>
+            </div>
+
+            <!-- Minimalist Signature -->
+            <div class="logo-section">
+                <h2 class="logo-title">6. Minimalist Signature</h2>
+                <p class="logo-description">Ultra-clean version for watermarks and tight spaces.</p>
+                <div class="logo-container">
+                    <svg viewBox="0 0 280 50" width="280" height="50" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="signatureGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" style="stop-color:#8b5a2b;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#ff9933;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        
+                        <!-- Simple lotus icon -->
+                        <g transform="translate(25,25)">
+                            <ellipse cx="0" cy="0" rx="4" ry="10" fill="#ff9933" transform="rotate(0)" opacity="0.9"/>
+                            <ellipse cx="0" cy="0" rx="4" ry="10" fill="#ffb347" transform="rotate(90)" opacity="0.8"/>
+                            <circle cx="0" cy="0" r="3" fill="#e6740a" opacity="0.9">
+                                <animate attributeName="opacity" values="0.9;1;0.9" dur="4s" repeatCount="indefinite"/>
+                            </circle>
+                        </g>
+                        
+                        <!-- Text -->
+                        <text x="50" y="30" font-family="Crimson Text, serif" font-size="20" font-weight="600" fill="url(#signatureGradient)">Gur Jass Arts</text>
+                        
+                        <!-- Decorative element -->
+                        <circle cx="200" cy="25" r="1.5" fill="#ff9933" opacity="0.7"/>
+                        <circle cx="210" cy="25" r="1" fill="#ffb347" opacity="0.6"/>
+                        <circle cx="220" cy="25" r="1.5" fill="#e6740a" opacity="0.8"/>
+                    </svg>
+                </div>
+                <span class="usage-note">Best for: Watermarks, mobile headers, signatures</span>
+            </div>
+        </div>
+
+        <!-- Traditional Indian Art Style Logo -->
+        <div class="logo-section">
+            <h2 class="logo-title">7. Traditional Indian Art Style</h2>
+            <p class="logo-description">Inspired by traditional Indian art forms like Madhubani and Warli paintings.</p>
+            <div class="logo-container">
+                <svg viewBox="0 0 400 160" width="400" height="160" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="traditionalGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#ff9933;stop-opacity:1" />
+                            <stop offset="50%" style="stop-color:#ffb347;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#e6740a;stop-opacity:1" />
+                        </linearGradient>
+                        <linearGradient id="textGradient7" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#8b5a2b;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#ff9933;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    
+                    <!-- Traditional border pattern -->
+                    <rect x="10" y="10" width="380" height="140" fill="none" stroke="#ff9933" stroke-width="2" opacity="0.3"/>
+                    
+                    <!-- Peacock-inspired design -->
+                    <g transform="translate(80,80)">
+                        <!-- Body -->
+                        <ellipse cx="0" cy="0" rx="15" ry="25" fill="url(#traditionalGradient)" opacity="0.8"/>
+                        
+                        <!-- Feathers -->
+                        <g opacity="0.7">
+                            <ellipse cx="-20" cy="-15" rx="8" ry="20" fill="#ff9933" transform="rotate(-30)"/>
+                            <ellipse cx="-15" cy="-25" rx="6" ry="18" fill="#ffb347" transform="rotate(-15)"/>
+                            <ellipse cx="0" cy="-30" rx="6" ry="18" fill="#ff9933"/>
+                            <ellipse cx="15" cy="-25" rx="6" ry="18" fill="#ffb347" transform="rotate(15)"/>
+                            <ellipse cx="20" cy="-15" rx="8" ry="20" fill="#ff9933" transform="rotate(30)"/>
+                        </g>
+                        
+                        <!-- Eyes on feathers -->
+                        <circle cx="-15" cy="-35" r="3" fill="#e6740a" opacity="0.8"/>
+                        <circle cx="0" cy="-40" r="3" fill="#e6740a" opacity="0.8"/>
+                        <circle cx="15" cy="-35" r="3" fill="#e6740a" opacity="0.8"/>
+                        
+                        <!-- Traditional dots pattern -->
+                        <circle cx="-8" cy="5" r="1.5" fill="#ff9933"/>
+                        <circle cx="0" cy="8" r="1.5" fill="#ffb347"/>
+                        <circle cx="8" cy="5" r="1.5" fill="#ff9933"/>
+                    </g>
+                    
+                    <!-- Traditional floral border elements -->
+                    <g transform="translate(30,40)" opacity="0.4">
+                        <circle cx="0" cy="0" r="3" fill="#ff9933"/>
+                        <circle cx="10" cy="5" r="2" fill="#ffb347"/>
+                        <circle cx="5" cy="15" r="2" fill="#e6740a"/>
+                    </g>
+                    
+                    <g transform="translate(350,120)" opacity="0.4">
+                        <circle cx="0" cy="0" r="3" fill="#ff9933"/>
+                        <circle cx="-10" cy="-5" r="2" fill="#ffb347"/>
+                        <circle cx="-5" cy="-15" r="2" fill="#e6740a"/>
+                    </g>
+                    
+                    <!-- Main text -->
+                    <text x="160" y="60" font-family="Crimson Text, serif" font-size="32" font-weight="600" fill="url(#textGradient7)">Gur Jass</text>
+                    <text x="160" y="90" font-family="Crimson Text, serif" font-size="24" font-weight="400" fill="url(#textGradient7)">Arts</text>
+                    
+                    <!-- Traditional line patterns -->
+                    <g opacity="0.5">
+                        <line x1="160" y1="100" x2="280" y2="100" stroke="#ff9933" stroke-width="1"/>
+                        <line x1="160" y1="105" x2="280" y2="105" stroke="#ffb347" stroke-width="1"/>
+                    </g>
+                    
+                    <!-- Subtitle with traditional touch -->
+                    <text x="160" y="125" font-family="Inter, sans-serif" font-size="12" font-weight="300" font-style="italic" fill="#8b5a2b" opacity="0.8">परंपरागत कला · Traditional Art</text>
+                </svg>
+            </div>
+            <span class="usage-note">Best for: Cultural exhibitions, traditional art shows, heritage events</span>
+        </div>
+
+        <!-- Usage Guidelines -->
+        <div class="logo-section">
+            <h2 class="logo-title">Brand Guidelines for Gur Jass Arts</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin-top: 1rem;">
+                <div style="background: #fdf8f0; padding: 1rem; border-radius: 8px;">
+                    <h4 style="color: #ff9933; margin-bottom: 0.5rem;">Color Palette</h4>
+                    <p style="font-size: 0.9rem; margin: 0;">
+                        Saffron: #ff9933<br>
+                        Deep Saffron: #e6740a<br>
+                        Marigold: #ffb347<br>
+                        Turmeric: #fdb462<br>
+                        Earth Brown: #8b5a2b
+                    </p>
+                </div>
+                <div style="background: #fdf8f0; padding: 1rem; border-radius: 8px;">
+                    <h4 style="color: #ff9933; margin-bottom: 0.5rem;">Typography</h4>
+                    <p style="font-size: 0.9rem; margin: 0;">
+                        Primary: Crimson Text<br>
+                        Secondary: Inter<br>
+                        Traditional: Devanagari Script<br>
+                        Weights: 300, 400, 600
+                    </p>
+                </div>
+                <div style="background: #fdf8f0; padding: 1rem; border-radius: 8px;">
+                    <h4 style="color: #ff9933; margin-bottom: 0.5rem;">Cultural Elements</h4>
+                    <p style="font-size: 0.9rem; margin: 0;">
+                        Lotus flowers<br>
+                        Mandala patterns<br>
+                        Paisley motifs<br>
+                        Traditional dots<br>
+                        Peacock inspiration
+                    </p>
+                </div>
+                <div style="background: #fdf8f0; padding: 1rem; border-radius: 8px;">
+                    <h4 style="color: #ff9933; margin-bottom: 0.5rem;">Minimum Sizes</h4>
+                    <p style="font-size: 0.9rem; margin: 0;">
+                        Main logo: 80px width<br>
+                        Icon version: 32px<br>
+                        Signature: 120px width<br>
+                        Badge: 60px diameter
+                    </p>
+                </div>
+            </div>
+            
+            <div style="background: #ff9933; color: white; padding: 1.5rem; border-radius: 10px; margin-top: 2rem;">
+                <h4 style="margin-bottom: 1rem;">Cultural Significance</h4>
+                <p style="margin: 0; line-height: 1.6;">
+                    The logo design celebrates Indian heritage through traditional elements: the lotus represents purity and spiritual awakening, mandala patterns symbolize cosmic order and unity, saffron color connects to spirituality and courage, while paisley motifs honor textile traditions. Each variation maintains cultural authenticity while embracing contemporary design principles.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
