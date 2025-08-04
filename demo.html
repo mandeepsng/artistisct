@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Circle Badge Variations - Gur Jass Arts</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&family=Noto+Sans+Devanagari:wght@300;400;600&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #fffcf7 0%, #fdf8f0 100%);
+            margin: 0;
+            padding: 2rem;
+            color: #2c2c2c;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            font-family: 'Crimson Text', serif;
+            font-size: 2.8rem;
+            color: #ff9933;
+            text-align: center;
+            margin-bottom: 3rem;
+            text-shadow: 0 2px 4px rgba(255, 153, 51, 0.2);
+        }
+        
+        .badges-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .badge-section {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 15px 40px rgba(255, 153, 51, 0.12);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .badge-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(255, 153, 51, 0.18);
+        }
+        
+        .badge-title {
+            font-family: 'Crimson Text', serif;
+            font-size: 1.4rem;
+            color: #8b5a2b;
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .badge-description {
+            color: #6b6b6b;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+        
+        .badge-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 180px;
+            background: radial-gradient(circle, #fdf8f0 0%, #f9f3ea 100%);
+            border-radius: 15px;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .badge-container::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 153, 51, 0.05) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+        
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        .usage-note {
+            background: linear-gradient(135deg, #ff9933 0%, #e6740a 100%);
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 25px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            display: inline-block;
+            margin-top: 1rem;
+            box-shadow: 0 4px 15px rgba(255, 153, 51, 0.3);
+        }
+        
+        .feature-highlight {
+            background: #fdf8f0;
+            border: 2px solid #ff9933;
+            border-radius: 10px;
+            padding: 0.5rem 1rem;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: #8b5a2b;
+            font-weight: 500;
+        }
+        
+        .size-options {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .size-btn {
+            background: #ff9933;
+            color: white;
+            border: none;
+            padding: 0.4rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .size-btn:hover {
+            background: #e6740a;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Enhanced Circle Badge Variations</h1>
+        
+        <div class="badges-grid">
+            <!-- Premium Mandala Badge -->
+            <div class="badge-section">
+                <h2 class="badge-title">1. Premium Mandala Badge</h2>
+                <p class="badge-description">Intricate mandala design with layered petals, geometric patterns, and spiritual symbolism perfect for luxury branding.</p>
+                <div class="badge-container">
+                    <svg viewBox="0 0 160 160" width="160" height="160" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <radialGradient id="premiumBg" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" style="stop-color:#ff9933;stop-opacity:1" />
+                                <stop offset="70%" style="stop-color:#e6740a;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#cc4400;stop-opacity:1" />
+                            </radialGradient>
+                            <radialGradient id="innerCircle" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" style="stop-color:#fffcf7;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#fdf8f0;stop-opacity:1" />
+                            </radialGradient>
+                            <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#8b5a2b;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#ff9933;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        
+                        <!-- Outer decorative ring -->
+                        <circle cx="80" cy="80" r="75" fill="url(#premiumBg)" opacity="0.95"/>
+                        <circle cx="80" cy="80" r="68" fill="none" stroke="#fffcf7" stroke-width="2" opacity="0.8"/>
+                        <circle cx="80" cy="80" r="62" fill="url(#innerCircle)"/>
+                        
+                        <!-- Intricate mandala layers -->
+                        <g transform="translate(80,80)" opacity="0.9">
+                            <!-- Outer petals -->
+                            <g>
+                                <ellipse cx="0" cy="-35" rx="8" ry="18" fill="#ff9933" opacity="0.8"/>
+                                <ellipse cx="25" cy="-25" rx="8" ry="18" fill="#ffb347" opacity="0.7" transform="rotate(45)"/>
+                                <ellipse cx="35" cy="0" rx="8" ry="18" fill="#ff9933" opacity="0.8" transform="rotate(90)"/>
+                                <ellipse cx="25" cy="25" rx="8" ry="18" fill="#ffb347" opacity="0.7" transform="rotate(135)"/>
+                                <ellipse cx="0" cy="35" rx="8" ry="18" fill="#ff9933" opacity="0.8" transform="rotate(180)"/>
+                                <ellipse cx="-25" cy="25" rx="8" ry="18" fill="#ffb347" opacity="0.7" transform="rotate(225)"/>
+                                <ellipse cx="-35" cy="0" rx="8" ry="18" fill="#ff9933" opacity="0.8" transform="rotate(270)"/>
+                                <ellipse cx="-25" cy="-25" rx="8" ry="18" fill="#ffb347" opacity="0.7" transform="rotate(315)"/>
+                            </g>
+                            
+                            <!-- Middle petals -->
+                            <g>
+                                <ellipse cx="0" cy="-25" rx="5" ry="12" fill="#e6740a" opacity="0.9"/>
+                                <ellipse cx="18" cy="-18" rx="5" ry="12" fill="#fdb462" opacity="0.8" transform="rotate(45)"/>
+                                <ellipse cx="25" cy="0" rx="5" ry="12" fill="#e6740a" opacity="0.9" transform="rotate(90)"/>
+                                <ellipse cx="18" cy="18" rx="5" ry="12" fill="#fdb462" opacity="0.8" transform="rotate(135)"/>
+                                <ellipse cx="0" cy="25" rx="5" ry="12" fill="#e6740a" opacity="0.9" transform="rotate(180)"/>
+                                <ellipse cx="-18" cy="18" rx="5" ry="12" fill="#fdb462" opacity="0.8" transform="rotate(225)"/>
+                                <ellipse cx="-25" cy="0" rx="5" ry="12" fill="#e6740a" opacity="0.9" transform="rotate(270)"/>
+                                <ellipse cx="-18" cy="-18" rx="5" ry="12" fill="#fdb462" opacity="0.8" transform="rotate(315)"/>
+                            </g>
+                            
+                            <!-- Geometric patterns -->
+                            <circle cx="0" cy="0" r="20" fill="none" stroke="#ff9933" stroke-width="1" opacity="0.6"/>
+                            <circle cx="0" cy="0" r="15" fill="none" stroke="#ffb347" stroke-width="1" opacity="0.7"/>
+                            <circle cx="0" cy="0" r="10" fill="none" stroke="#e6740a" stroke-width="1" opacity="0.8"/>
+                            
+                            <!-- Sacred geometry -->
+                            <g opacity="0.5">
+                                <path d="M -10 -10 L 10 10 M 10 -10 L -10 10" stroke="#ff9933" stroke-width="1"/>
+                                <path d="M 0 -15 L 0 15 M -15 0 L 15 0" stroke="#ffb347" stroke-width="1"/>
+                            </g>
+                        </g>
+                        
+                        <!-- Central lotus with animation -->
+                        <g transform="translate(80,68)">
+                            <ellipse cx="0" cy="0" rx="6" ry="15" fill="#ff9933" transform="rotate(0)" opacity="0.9">
+                                <animateTransform attributeName="transform" type="rotate" values="0;360" dur="20s" repeatCount="indefinite"/>
+                            </ellipse>
+                            <ellipse cx="0" cy="0" rx="6" ry="15" fill="#ffb347" transform="rotate(60)" opacity="0.8">
+                                <animateTransform attributeName="transform" type="rotate" values="60;420" dur="20s" repeatCount="indefinite"/>
+                            </ellipse>
+                            <ellipse cx="0" cy="0" rx="6" ry="15" fill="#ff9933" transform="rotate(120)" opacity="0.9">
+                                <animateTransform attributeName="transform" type="rotate" values="120;480" dur="20s" repeatCount="indefinite"/>
+                            </ellipse>
+                            <circle cx="0" cy="0" r="6" fill="#e6740a" opacity="0.9">
+                                <animate attributeName="opacity" values="0.9;1;0.9" dur="3s" repeatCount="indefinite"/>
+                            </circle>
+                        </g>
+                        
+                        <!-- Brand text -->
+                        <text x="80" y="100" font-family="Crimson Text, serif" font-size="16" font-weight="600" fill="url(#textGrad)" text-anchor="middle">GJ</text>
+                        <text x="80" y="115" font-family="Inter, sans-serif" font-size="9" font-weight="400" fill="#8b5a2b" text-anchor="middle" opacity="0.9">ARTS</text>
+                        
+                        <!-- Decorative dots -->
+                        <circle cx="50" cy="50" r="2" fill="#ff9933" opacity="0.7">
+                            <animate attributeName="opacity" values="0.7;0.3;0.7" dur="2s" repeatCount="indefinite"/>
+                        </circle>
+                        <circle cx="110" cy="55" r="1.5" fill="#ffb347" opacity="0.6">
+                            <animate attributeName="opacity" values="0.6;0.3;0.6" dur="3s" repeatCount="indefinite"/>
+                        </circle>
+                        <circle cx="55" cy="110" r="2" fill="#e6740a" opacity="0.8">
+                            <animate attributeName="opacity" values="0.8;0.3;0.8" dur="2.5s" repeatCount="indefinite"/>
+                        </circle>
+                    </svg>
+                </div>
+                <span class="usage-note">Best for: Premium products, certificates, luxury branding</span>
+                <div class="feature-highlight">✨ Features rotating lotus animation & intricate mandala layers</div>
+            </div>
+
+            <!-- Paisley Fusion Badge -->
+            <div class="badge-section">
+                <h2 class="badge-title">2. Paisley Fusion Badge</h2>
+                <p class="badge-description">Traditional paisley motifs blended with contemporary design, celebrating Indian textile heritage.</p>
+                <div class="badge-container">
+                    <svg viewBox="0 0 160 160" width="160" height="160" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="paisleyBg" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#ff9933;stop-opacity:1" />
+                                <stop offset="50%" style="stop-color:#ffb347;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#e6740a;stop-opacity:1" />
+                            </linearGradient>
+                            <radialGradient id="paisleyInner" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" style="stop-color:#fffcf7;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#fdf8f0;stop-opacity:1" />
+                            </radialGradient>
+                        </defs>
+                        
+                        <!-- Outer ring with paisley pattern -->
+                        <circle cx="80" cy="80" r="75" fill="url(#paisleyBg)" opacity="0.9"/>
+                        <circle cx="80" cy="80" r="65" fill="url(#paisleyInner)"/>
+                        
+                        <!-- Paisley decorations around the border -->
+                        <g transform="translate(80,80)">
+                            <!-- Top paisley -->
+                            <path d="M 0 -50 Q 15 -60 20 -45 Q 15 -30 0 -40 Q -10 -45 0 -50" fill="#fdb462" opacity="0.8"/>
+                            <!-- Right paisley -->
+                            <path d="M 50 0 Q 60 15 45 20 Q 30 15 40 0 Q 45 -10 50 0" fill="#ff9933" opacity="0.7"/>
+                            <!-- Bottom paisley -->
+                            <path d="M 0 50 Q -15 60 -20 45 Q -15 30 0 40 Q 10 45 0 50" fill="#ffb347" opacity="0.8"/>
+                            <!-- Left paisley -->
+                            <path d="M -50 0 Q -60 -15 -45 -20 Q -30 -15 -40 0 Q -45 10 -50 0" fill="#e6740a" opacity="0.7"/>
+                            
+                            <!-- Diagonal paisleys -->
+                            <g transform="rotate(45)">
+                                <path d="M 0 -35 Q 8 -40 10 -32 Q 8 -24 0 -28 Q -5 -30 0 -35" fill="#ff9933" opacity="0.6"/>
+                                <path d="M 35 0 Q 40 8 32 10 Q 24 8 28 0 Q 30 -5 35 0" fill="#ffb347" opacity="0.6"/>
+                                <path d="M 0 35 Q -8 40 -10 32 Q -8 24 0 28 Q 5 30 0 35" fill="#fdb462" opacity="0.6"/>
+                                <path d="M -35 0 Q -40 -8 -32 -10 Q -24 -8 -28 0 Q -30 5 -35 0" fill="#e6740a" opacity="0.6"/>
+                            </g>
+                        </g>
+                        
+                        <!-- Central design -->
+                        <g transform="translate(80,80)">
+                            <!-- Central circle with pattern -->
+                            <circle cx="0" cy="0" r="30" fill="none" stroke="#ff9933" stroke-width="2" opacity="0.8"/>
+                            <circle cx="0" cy="0" r="22" fill="none" stroke="#ffb347" stroke-width="1" opacity="0.7"/>
+                            
+                            <!-- Central paisley cluster -->
+                            <g opacity="0.9">
+                                <path d="M 0 -15 Q 8 -18 10 -10 Q 8 -2 0 -6 Q -4 -8 0 -15" fill="#ff9933"/>
+                                <path d="M 15 0 Q 18 8 10 10 Q 2 8 6 0 Q 8 -4 15 0" fill="#ffb347"/>
+                                <path d="M 0 15 Q -8 18 -10 10 Q -8 2 0 6 Q 4 8 0 15" fill="#e6740a"/>
+                                <path d="M -15 0 Q -18 -8 -10 -10 Q -2 -8 -6 0 Q -8 4 -15 0" fill="#fdb462"/>
+                            </g>
+                        </g>
+                        
+                        <!-- Lotus center -->
+                        <g transform="translate(80,68)">
+                            <ellipse cx="0" cy="0" rx="4" ry="10" fill="#ff9933" transform="rotate(0)" opacity="0.9"/>
+                            <ellipse cx="0" cy="0" rx="4" ry="10" fill="#ffb347" transform="rotate(90)" opacity="0.8"/>
+                            <circle cx="0" cy="0" r="4" fill="#e6740a" opacity="0.9">
+                                <animate attributeName="opacity" values="0.9;1;0.9" dur="4s" repeatCount="indefinite"/>
+                            </circle>
+                        </g>
+                        
+                        <!-- Text -->
+                        <text x="80" y="100" font-family="Crimson Text, serif" font-size="16" font-weight="600" fill="#8b5a2b" text-anchor="middle">GJ</text>
+                        <text x="80" y="115" font-family="Inter, sans-serif" font-size="9" font-weight="400" fill="#8b5a2b" text-anchor="middle" opacity="0.8">ARTS</text>
+                    </svg>
+                </div>
+                <span class="usage-note">Best for: Textiles, cultural products, traditional art</span>
+                <div class="feature-highlight">🎨 Celebrates Indian textile heritage with authentic paisley motifs</div>
+            </div>
+
+            <!-- Peacock Feather Badge -->
+            <div class="badge-section">
+                <h2 class="badge-title">3. Peacock Feather Badge</h2>
+                <p class="badge-description">Inspired by peacock feathers, India's national bird, with elegant curves and vibrant patterns.</p>
+                <div class="badge-container">
+                    <svg viewBox="0 0 160 160" width="160" height="160" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <radialGradient id="peacockBg" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" style="stop-color:#ff9933;stop-opacity:1" />
+                                <stop offset="70%" style="stop-color:#ffb347;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#e6740a;stop-opacity:1" />
+                            </radialGradient>
+                            <linearGradient id="featherGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#ff9933;stop-opacity:1" />
+                                <stop offset="50%" style="stop-color:#ffb347;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#fdb462;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        
+                        <!-- Base circle -->
+                        <circle cx="80" cy="80" r="75" fill="url(#peacockBg)" opacity="0.85"/>
+                        <circle cx="80" cy="80" r="65" fill="#fffcf7"/>
+                        
+                        <!-- Peacock feather patterns -->
+                        <g transform="translate(80,80)">
+                            <!-- Feather eye patterns -->
+                            <g>
+                                <!-- Top feather eye -->
+                                <ellipse cx="0" cy="-35" rx="12" ry="18" fill="url(#featherGrad)" opacity="0.8"/>
+                                <ellipse cx="0" cy="-35" rx="8" ry="12" fill="#e6740a" opacity="0.9"/>
+                                <ellipse cx="0" cy="-35" rx="4" ry="6" fill="#ff9933" opacity="1"/>
+                                <circle cx="0" cy="-35" r="2" fill="#fffcf7"/>
+                                
+                                <!-- Right feather eye -->
+                                <ellipse cx="35" cy="0" rx="18" ry="12" fill="url(#featherGrad)" opacity="0.8" transform="rotate(90)"/>
+                                <ellipse cx="35" cy="0" rx="12" ry="8" fill="#ffb347" opacity="0.9" transform="rotate(90)"/>
+                                <ellipse cx="35" cy="0" rx="6" ry="4" fill="#e6740a" opacity="1" transform="rotate(90)"/>
+                                <circle cx="35" cy="0" r="2" fill="#fffcf7"/>
+                                
+                                <!-- Bottom feather eye -->
+                                <ellipse cx="0" cy="35" rx="12" ry="18" fill="url(#featherGrad)" opacity="0.8" transform="rotate(180)"/>
+                                <ellipse cx="0" cy="35" rx="8" ry="12" fill="#fdb462" opacity="0.9" transform="rotate(180)"/>
+                                <ellipse cx="0" cy="35" rx="4" ry="6" fill="#ff9933" opacity="1" transform="rotate(180)"/>
+                                <circle cx="0" cy="35" r="2" fill="#fffcf7"/>
+                                
+                                <!-- Left feather eye -->
+                                <ellipse cx="-35" cy="0" rx="18" ry="12" fill="url(#featherGrad)" opacity="0.8" transform="rotate(270)"/>
+                                <ellipse cx="-35" cy="0" rx="12" ry="8" fill="#e6740a" opacity="0.9" transform="rotate(270)"/>
+                                <ellipse cx="-35" cy="0" rx="6" ry="4" fill="#ffb347" opacity="1" transform="rotate(270)"/>
+                                <circle cx="-35" cy="0" r="2" fill="#fffcf7"/>
+                            </g>
+                            
+                            <!-- Feather stems -->
+                            <g stroke="#8b5a2b" stroke-width="2" opacity="0.6">
+                                <path d="M 0 -20 Q 5 -10 0 0" fill="none"/>
+                                <path d="M 20 0 Q 10 5 0 0" fill="none"/>
+                                <path d="M 0 20 Q -5 10 0 0" fill="none"/>
+                                <path d="M -20 0 Q -10 -5 0 0" fill="none"/>
+                            </g>
+                            
+                            <!-- Central decorative ring -->
+                            <circle cx="0" cy="0" r="15" fill="none" stroke="#ff9933" stroke-width="1.5" opacity="0.7"/>
+                            <circle cx="0" cy="0" r="10" fill="none" stroke="#ffb347" stroke-width="1" opacity="0.8"/>
+                        </g>
+                        
+                        <!-- Central lotus -->
+                        <g transform="translate(80,68)">
+                            <ellipse cx="0" cy="0" rx="5" ry="12" fill="#ff9933" transform="rotate(0)" opacity="0.9"/>
+                            <ellipse cx="0" cy="0" rx="5" ry="12" fill="#ffb347" transform="rotate(60)" opacity="0.8"/>
+                            <ellipse cx="0" cy="0" rx="5" ry="12" fill="#e6740a" transform="rotate(120)" opacity="0.9"/>
+                            <circle cx="0" cy="0" r="5" fill="#fdb462" opacity="0.9">
+                                <animate attributeName="opacity" values="0.9;1;0.9" dur="4s" repeatCount="indefinite"/>
+                            </circle>
+                        </g>
+                        
+                        <!-- Text -->
+                        <text x="80" y="100" font-family="Crimson Text, serif" font-size="16" font-weight="600" fill="#8b5a2b" text-anchor="middle">GJ</text>
+                        <text x="80" y="115" font-family="Inter, sans-serif" font-size="9" font-weight="400" fill="#8b5a2b" text-anchor="middle" opacity="0.8">ARTS</text>
+                        
+                        <!-- Floating feather elements -->
+                        <g opacity="0.4">
+                            <path d="M 40 40 Q 45 35 50 40 Q 45 45 40 40" fill="#ff9933">
+                                <animateTransform attributeName="transform" type="rotate" values="0 45 40;10 45 40;0 45 40" dur="6s" repeatCount="indefinite"/>
+                            </path>
+                            <path d="M 120 45 Q 115 40 110 45 Q 115 50 120 45" fill="#ffb347">
+                                <animateTransform attributeName="transform" type="rotate" values="0 115 45;-10 115 45;0 115 45" dur="7s" repeatCount="indefinite"/>
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+                <span class="usage-note">Best for: Cultural events, traditional celebrations, premium art</span>
+                <div class="feature-highlight">🦚 Honors India's national bird with elegant feather patterns</div>
+            </div>
+
+            <!-- Sacred Geometry Badge -->
+            <div class="badge-section">
+                <h2 class="badge-title">4. Sacred Geometry Badge</h2>
+                <p class="badge-description">Mathematical precision meets spiritual symbolism with yantra-inspired geometric patterns.</p>
+                <div class="badge-container">
+                    <svg viewBox="0 0 160 160" width="160" height="160" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="geometryBg" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#ff9933;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#cc4400;stop-opacity:1" />
+                            </linearGradient>
+                            <radialGradient id="geometryInner" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" style="stop-color:#fffcf7;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#fdf8f0;stop-opacity:1" />
+                            </radialGradient>
+                        </defs>
+                        
+                        <!-- Base -->
+                        <circle cx="80" cy="80" r="75" fill="url(#geometryBg)" opacity="0.9"/>
+                        <circle cx="80" cy="80" r="65" fill="url(#geometryInner)"/>
+                        
+                        <!-- Sacred geometry patterns -->
+                        <g transform="translate(80,80)">
+                            <!-- Outer hexagon -->
+                            <polygon points="0,-40 35,-20 35,20 0,40 -35,20 -35,-20" fill="none" stroke="#ff9933" stroke-width="2" opacity="0.8"/>
+                            
+                            <!-- Inner triangles (Sri Yantra inspired) -->
+                            <g opacity="0.7">
+                                <!-- Upward triangles -->
+                                <polygon points="0,-25 22,12 -22,12" fill="none" stroke="#ffb347" stroke-width="1.5"/>
+                                <polygon points="0,-15 13,7 -13,7" fill="none" stroke="#e6740a" stroke-width="1"/>
+                                
+                                <!-- Downward triangles -->
+                                <polygon points="0,25 -22,-12 22,-12" fill="none" stroke="#fdb462" stroke-width="1.5"/>
+                                <polygon points="0,15 -13,-7 13,-7" fill="none" stroke="#ff9933" stroke-width="1"/>
+                            </g>
+                            
+                            <!-- Central star pattern -->
+                            <g opacity="0.8">
+                                <polygon points="0,-12 3,-3 12,0 3,3 0,12 -3,3 -12,0 -3,-3" fill="#ff9933" opacity="0.6"/>
+                                <circle cx="0" cy="0" r="8" fill="none" stroke="#ffb347" stroke-width="1"/>
+                                <circle cx="0" cy="0" r="5" fill="none" stroke="#e6740a" stroke-width="1"/>
+                            </g>
+                            
+                            <!-- Geometric dots -->
+                            <g fill="#ff9933" opacity="0.6">
+                                <circle cx="0" cy="-30" r="2"/>
+                                <circle cx="26" cy="-15" r="2"/>
+                                <circle cx="26" cy="15" r="2"/>
+                                <circle cx="0" cy="30" r="2"/>
+                                <circle cx="-26" cy="15" r="2"/>
+                                <circle cx="-26" cy="-15" r="2"/>
+                            </g>
+                        </g>
+                        
+                        <!-- Animated central lotus -->
+                        <g transform="translate(80,68)">
+                            <ellipse cx="0" cy="0" rx="4" ry="10" fill="#ff9933" transform="rotate(0)" opacity="0.9">
+                                <animateTransform attributeName="transform" type="rotate" values="0;120;240;360" dur="12s" repeatCount="indefinite"/>
+                            </ellipse>
+                            <ellipse cx="0" cy="0" rx="4" ry="10" fill="#ffb347" transform="rotate(120)" opacity="0.8">
+                                <animateTransform attributeName="transform" type="rotate" values="120;240;360;480" dur="12s" repeatCount="indefinite"/>
+                            </ellipse>
+                            <ellipse cx="0" cy="0" rx="4" ry="10" fill="#e6740a" transform="rotate(240)" opacity="0.9">
+                                <animateTransform attributeName="transform" type="rotate" values="240;360;480;600" dur="12s" repeatCount="indefinite"/>
+                            </ellipse>
+                            <circle cx="0" cy="0" r="4" fill="#fdb462" opacity="0.9">
+                                <animate attributeName="opacity" values="0.9;1;0.9" dur="3s" repeatCount="indefinite"/>
+                            </circle>
+                        </g>
+                        
+                        <!-- Text -->
+                        <text x="80" y="100" font-family="Crimson Text, serif" font-size="16" font-weight="600" fill="#8b5a2b" text-anchor="middle">GJ</text>
+                        <text x="80" y="115" font-family="Inter, sans-serif" font-size="9" font-weight="400" fill="#8b5a2b" text-anchor="middle" opacity="0.8">ARTS</text>
+                    </svg>
+                </div>
+                <span class="usage-note">Best for: Spiritual art, meditation centers, yoga studios</span>
+                <div class="feature-highlight">🔯 Features Sri Yantra-inspired sacred geometry patterns</div>
+            </div>
+
+            <!-- Vintage Stamp Badge -->
+            <div class="badge-section">
+                <h2 class="badge-title">5. Vintage Stamp Style</h2>
+                <p class="badge-description">Classic postage stamp aesthetic with perforated edges and traditional Indian motifs.</p>
+                <div class="badge-container">
+                    <svg viewBox="0 0 160 160" width="160" height="160" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="stampBg" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#ff9933;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#e6740a;stop-opacity:1" />
+                            </linearGradient>
+                            <pattern id="stampPattern" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse">
+                                <circle cx="4" cy="4" r="1.5" fill="#fffcf7" opacity="0.3"/>
+                            </pattern>
+                        </defs>
+                        
+                        <!-- Stamp base -->
+                        <rect x="20" y="20" width="120" height="120" fill="url(#stampBg)" rx="5"/>
+                        <rect x="25" y="25" width="110" height="110" fill="#fffcf7" rx="3"/>
+                        
+                        <!-- Perforated edges -->
+                        <g fill="#ff9933" opacity="0.6">
+                            <!-- Top edge -->
+                            <circle cx="30" cy="20" r="2"/>
+                            <circle cx="40" cy="20" r="2"/>
+                            <circle cx="50" cy="20" r="2"/>
+                            <circle cx="60" cy="20" r="2"/>
+                            <circle cx="70" cy="20" r="2"/>
+                            <circle cx="80" cy="20" r="2"/>
+                            <circle cx="90" cy="20" r="2"/>
+                            <circle cx="100" cy="20" r="2"/>
+                            <circle cx="110" cy="20" r="2"/>
+                            <circle cx="120" cy="20" r="2"/>
+                            <circle cx="130" cy="20" r="2"/>
+                            
+                            <!-- Right edge -->
+                            <circle cx="140" cy="30" r="2"/>
+                            <circle cx="140" cy="40" r="2"/>
+                            <circle cx="140" cy="50" r="2"/>
+                            <circle cx="140" cy="60" r="2"/>
+                            <circle cx="140" cy="70" r="2"/>
+                            <circle cx="140" cy="80" r="2"/>
+                            <circle cx="140" cy="90" r="2"/>
+                            <circle cx="140" cy="100" r="2"/>
+                            <circle cx="140" cy="110" r="2"/>
+                            <circle cx="140" cy="120" r="2"/>
+                            <circle cx="140" cy="130" r="2"/>
+                            
+                            <!-- Bottom edge -->
+                            <circle cx="130" cy="140" r="2"/>
+                            <circle cx="120" cy="140" r="2"/>
+                            <circle cx="110" cy="140" r="2"/>
+                            <circle cx="100" cy="140" r="2"/>
+                            <circle cx="90" cy="140" r="2"/>
+                            <circle cx="80" cy="140" r="2"/>
+                            <circle cx="70" cy="140" r="2"/>
+                            <circle cx="60" cy="140" r="2"/>
+                            <circle cx="50" cy="140" r="2"/>
+                            <circle cx="40" cy="140" r="2"/>
+                            <circle cx="30" cy="140" r="2"/>
+                            
+                            <!-- Left edge -->
+                            <circle cx="20" cy="130" r="2"/>
+                            <circle cx="20" cy="120" r="2"/>
+                            <circle cx="20" cy="110" r="2"/>
+                            <circle cx="20" cy="100" r="2"/>
+                            <circle cx="20" cy="90" r="2"/>
+                            <circle cx="20" cy="80" r="2"/>
+                            <circle cx="20" cy="70" r="2"/>
+                            <circle cx="20" cy="60" r="2"/>
+                            <circle cx="20" cy="50" r="2"/>
+                            <circle cx="20" cy="40" r="2"/>
+                            <circle cx="20" cy="30" r="2"/>
+                        </g>
+                        
+                        <!-- Vintage border -->
+                        <rect x="30" y="30" width="100" height="100" fill="none" stroke="#ff9933" stroke-width="2" opacity="0.8"/>
+                        <rect x="35" y="35" width="90" height="90" fill="none" stroke="#ffb347" stroke-width="1" opacity="0.6"/>
+                        
+                        <!-- Central design -->
+                        <g transform="translate(80,80)">
+                            <!-- Corner decorations -->
+                            <g opacity="0.7">
+                                <path d="M -35 -35 Q -30 -40 -25 -35 Q -30 -30 -35 -35" fill="#ff9933"/>
+                                <path d="M 35 -35 Q 40 -30 35 -25 Q 30 -30 35 -35" fill="#ffb347"/>
+                                <path d="M 35 35 Q 30 40 25 35 Q 30 30 35 35" fill="#e6740a"/>
+                                <path d="M -35 35 Q -40 30 -35 25 Q -30 30 -35 35" fill="#fdb462"/>
+                            </g>
+                            
+                            <!-- Central lotus with vintage styling -->
+                            <circle cx="0" cy="0" r="25" fill="none" stroke="#ff9933" stroke-width="2" opacity="0.6"/>
+                            <circle cx="0" cy="0" r="18" fill="none" stroke="#ffb347" stroke-width="1" opacity="0.7"/>
+                        </g>
+                        
+                        <!-- Vintage lotus -->
+                        <g transform="translate(80,65)">
+                            <ellipse cx="0" cy="0" rx="6" ry="15" fill="#ff9933" transform="rotate(0)" opacity="0.8"/>
+                            <ellipse cx="0" cy="0" rx="6" ry="15" fill="#ffb347" transform="rotate(45)" opacity="0.7"/>
+                            <ellipse cx="0" cy="0" rx="6" ry="15" fill="#e6740a" transform="rotate(90)" opacity="0.8"/>
+                            <ellipse cx="0" cy="0" rx="6" ry="15" fill="#fdb462" transform="rotate(135)" opacity="0.7"/>
+                            <circle cx="0" cy="0" r="6" fill="#ff9933" opacity="0.9"/>
+                        </g>
+                        
+                        <!-- Vintage text styling -->
+                        <text x="80" y="95" font-family="Crimson Text, serif" font-size="14" font-weight="600" fill="#8b5a2b" text-anchor="middle">GUR JASS</text>
+                        <text x="80" y="110" font-family="Inter, sans-serif" font-size="8" font-weight="400" fill="#8b5a2b" text-anchor="middle" opacity="0.8">ARTS</text>
+                        
+                        <!-- Denomination style number -->
+                        <text x="115" y="45" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#ff9933" opacity="0.7">100</text>
+                    </svg>
+                </div>
+                <span class="usage-note">Best for: Collectibles, vintage themes, official documents</span>
+                <div class="feature-highlight">📮 Authentic postage stamp design with perforated edges</div>
+            </div>
+
+            <!-- Contemporary Minimal Badge -->
+            <div class="badge-section">
+                <h2 class="badge-title">6. Contemporary Minimal</h2>
+                <p class="badge-description">Modern minimalist approach while preserving cultural essence - perfect for digital applications.</p>
+                <div class="badge-container">
+                    <svg viewBox="0 0 160 160" width="160" height="160" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="minimalBg" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#ff9933;stop-opacity:0.1" />
+                                <stop offset="100%" style="stop-color:#e6740a;stop-opacity:0.2" />
+                            </linearGradient>
+                            <linearGradient id="minimalAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#ff9933;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#e6740a;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        
+                        <!-- Minimal base -->
+                        <circle cx="80" cy="80" r="75" fill="url(#minimalBg)"/>
+                        <circle cx="80" cy="80" r="65" fill="#ffffff" opacity="0.9"/>
+                        
+                        <!-- Clean border -->
+                        <circle cx="80" cy="80" r="65" fill="none" stroke="url(#minimalAccent)" stroke-width="3" opacity="0.8"/>
+                        
+                        <!-- Simplified lotus icon -->
+                        <g transform="translate(80,70)">
+                            <!-- Outer petals -->
+                            <g opacity="0.6">
+                                <ellipse cx="0" cy="0" rx="8" ry="20" fill="#ff9933" transform="rotate(0)"/>
+                                <ellipse cx="0" cy="0" rx="8" ry="20" fill="#ff9933" transform="rotate(90)"/>
+                            </g>
+                            
+                            <!-- Inner petals -->
+                            <g opacity="0.8">
+                                <ellipse cx="0" cy="0" rx="5" ry="12" fill="#ffb347" transform="rotate(45)"/>
+                                <ellipse cx="0" cy="0" rx="5" ry="12" fill="#ffb347" transform="rotate(135)"/>
+                            </g>
+                            
+                            <!-- Center -->
+                            <circle cx="0" cy="0" r="6" fill="url(#minimalAccent)" opacity="0.9">
+                                <animate attributeName="opacity" values="0.9;1;0.9" dur="4s" repeatCount="indefinite"/>
+                            </circle>
+                        </g>
+                        
+                        <!-- Minimal text -->
+                        <text x="80" y="105" font-family="Inter, sans-serif" font-size="16" font-weight="500" fill="url(#minimalAccent)" text-anchor="middle">GJ</text>
+                        <text x="80" y="120" font-family="Inter, sans-serif" font-size="10" font-weight="300" fill="#8b5a2b" text-anchor="middle" opacity="0.8">ARTS</text>
+                        
+                        <!-- Subtle accent dots -->
+                        <g fill="url(#minimalAccent)" opacity="0.4">
+                            <circle cx="50" cy="50" r="2">
+                                <animate attributeName="opacity" values="0.4;0.8;0.4" dur="3s" repeatCount="indefinite"/>
+                            </circle>
+                            <circle cx="110" cy="55" r="1.5">
+                                <animate attributeName="opacity" values="0.4;0.7;0.4" dur="4s" repeatCount="indefinite"/>
+                            </circle>
+                            <circle cx="55" cy="110" r="2">
+                                <animate attributeName="opacity" values="0.4;0.6;0.4" dur="5s" repeatCount="indefinite"/>
+                            </circle>
+                        </g>
+                    </svg>
+                </div>
+                <span class="usage-note">Best for: Digital platforms, modern applications, tech</span>
+                <div class="feature-highlight">💎 Clean modern design perfect for digital platforms</div>
+            </div>
+        </div>
+
+        <!-- Additional Features Section -->
+        <!-- <div class="badge-section" style="margin-top: 3rem;">
+            <h2 class="badge-title">Customization Features</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                
+                <div style="background: linear-gradient(135deg, #ff9933 0%, #e6740a 100%); color: white; padding: 2rem; border-radius: 15px;">
+                    <h4 style="margin-bottom: 1rem; font-family: 'Crimson Text', serif;">🎨 Color Variations</h4>
+                    <p style="margin: 0; font-size: 0.9rem; line-height: 1.6;">
+                        Each badge design can be adapted with:
+                        • Traditional saffron & gold palette
+                        • Monochrome versions for printing
+                        • High contrast accessibility options
+                        • Regional color preferences
+                    </p>
+                </div>
+                
+                <div style="background: #fdf8f0; border: 2px solid #ff9933; padding: 2rem; border-radius: 15px;">
+                    <h4 style="margin-bottom: 1rem; color: #8b5a2b; font-family: 'Crimson Text', serif;">📏 Size Flexibility</h4>
+                    <p style="margin: 0; color: #6b6b6b; font-size: 0.9rem; line-height: 1.6;">
+                        Scalable vector designs work perfectly at:
+                        • 16px for favicons
+                        • 64px for social media
+                        • 256px for certificates
+                        • Any custom size needed
+                    </p>
+                </div>
+                
+                <div style="background: #8b5a2b; color: #fffcf7; padding: 2rem; border-radius: 15px;">
+                    <h4 style="margin-bottom: 1rem; font-family: 'Crimson Text', serif;">🌟 Animation Options</h4>
+                    <p style="margin: 0; font-size: 0.9rem; line-height: 1.6;">
+                        Dynamic elements include:
+                        • Rotating lotus centers
+                        • Pulsing light effects
+                        • Gentle floating animations
+                        • Breathing mandala patterns
+                    </p>
+                </div>
+                
+                <div style="background: linear-gradient(135deg, #ffb347 0%, #fdb462 100%); color: #8b5a2b; padding: 2rem; border-radius: 15px;">
+                    <h4 style="margin-bottom: 1rem; font-family: 'Crimson Text', serif;">🏷️ Text Customization</h4>
+                    <p style="margin: 0; font-size: 0.9rem; line-height: 1.6;">
+                        Flexible text options:
+                        • Full name "Gur Jass Arts"
+                        • Initials only "GJ"
+                        • Devanagari script support
+                        • Custom taglines and subtitles
+                    </p>
+                </div>
+            </div>
+            
+            <div style="background: linear-gradient(135deg, #fffcf7 0%, #fdf8f0 100%); border: 3px solid #ff9933; border-radius: 20px; padding: 2rem; margin-top: 2rem; text-align: center;">
+                <h3 style="color: #ff9933; font-family: 'Crimson Text', serif; margin-bottom: 1rem;">Cultural Heritage & Modern Design</h3>
+                <p style="color: #6b6b6b; line-height: 1.7; max-width: 800px; margin: 0 auto;">
+                    Each badge design celebrates the rich heritage of Indian art while embracing contemporary aesthetics. 
+                    The lotus symbolizes purity and spiritual awakening, mandala patterns represent cosmic harmony, 
+                    paisley motifs honor textile traditions, and peacock elements celebrate India's national bird. 
+                    These designs bridge traditional artistry with modern branding needs, ensuring cultural authenticity 
+                    in every application.
+                </p>
+            </div>
+        </div> -->
+    </div>
+
+    <script>
+        // Add subtle hover effects
+        document.querySelectorAll('.badge-container svg').forEach(svg => {
+            svg.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.05)';
+                this.style.transition = 'transform 0.3s ease';
+            });
+            
+            svg.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1)';
+            });
+        });
+        
+        // Add click to view larger functionality
+        document.querySelectorAll('.badge-container').forEach(container => {
+            container.addEventListener('click', function() {
+                const svg = this.querySelector('svg');
+                if (svg.style.width === '200px') {
+                    svg.style.width = '160px';
+                    svg.style.height = '160px';
+                } else {
+                    svg.style.width = '200px';
+                    svg.style.height = '200px';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
