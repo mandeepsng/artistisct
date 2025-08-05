@@ -141,363 +141,323 @@
 </head>
 <body>
     <div class="container">
-        <h1>Enhanced Circle Badge Variations</h1>
+        <h1>ArtCraft - Simple Art Logos</h1>
         
         <div class="badges-grid">
-            <!-- Premium Mandala Badge -->
+            <!-- Digital Art Tablet Logo -->
             <div class="badge-section">
-                <h2 class="badge-title">1. Premium Mandala Badge</h2>
-                <p class="badge-description">Intricate mandala design with layered petals, geometric patterns, and spiritual symbolism perfect for luxury branding.</p>
+                <h2 class="badge-title">1. Digital Art Tablet</h2>
+                <p class="badge-description">Modern digital drawing tablet with stylus, representing contemporary digital art and design.</p>
                 <div class="badge-container">
                     <svg viewBox="0 0 160 160" width="160" height="160" xmlns="http://www.w3.org/2000/svg">
                         <defs>
-                            <radialGradient id="premiumBg" cx="50%" cy="50%" r="50%">
-                                <stop offset="0%" style="stop-color:#ff9933;stop-opacity:1" />
-                                <stop offset="70%" style="stop-color:#e6740a;stop-opacity:1" />
-                                <stop offset="100%" style="stop-color:#cc4400;stop-opacity:1" />
-                            </radialGradient>
-                            <radialGradient id="innerCircle" cx="50%" cy="50%" r="50%">
-                                <stop offset="0%" style="stop-color:#fffcf7;stop-opacity:1" />
-                                <stop offset="100%" style="stop-color:#fdf8f0;stop-opacity:1" />
-                            </radialGradient>
-                            <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" style="stop-color:#8b5a2b;stop-opacity:1" />
-                                <stop offset="100%" style="stop-color:#ff9933;stop-opacity:1" />
+                            <linearGradient id="tabletGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#2c3e50;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#34495e;stop-opacity:1" />
+                            </linearGradient>
+                            <linearGradient id="screenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#ecf0f1;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#bdc3c7;stop-opacity:1" />
+                            </linearGradient>
+                            <linearGradient id="stylusGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#e74c3c;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#c0392b;stop-opacity:1" />
                             </linearGradient>
                         </defs>
                         
-                        <!-- Outer decorative ring -->
-                        <circle cx="80" cy="80" r="75" fill="url(#premiumBg)" opacity="0.95"/>
-                        <circle cx="80" cy="80" r="68" fill="none" stroke="#fffcf7" stroke-width="2" opacity="0.8"/>
-                        <circle cx="80" cy="80" r="62" fill="url(#innerCircle)"/>
+                        <!-- Background circle -->
+                        <circle cx="80" cy="80" r="75" fill="#ffffff" stroke="#e0e0e0" stroke-width="2"/>
                         
-                        <!-- Intricate mandala layers -->
-                        <g transform="translate(80,80)" opacity="0.9">
-                            <!-- Outer petals -->
-                            <g>
-                                <ellipse cx="0" cy="-35" rx="8" ry="18" fill="#ff9933" opacity="0.8"/>
-                                <ellipse cx="25" cy="-25" rx="8" ry="18" fill="#ffb347" opacity="0.7" transform="rotate(45)"/>
-                                <ellipse cx="35" cy="0" rx="8" ry="18" fill="#ff9933" opacity="0.8" transform="rotate(90)"/>
-                                <ellipse cx="25" cy="25" rx="8" ry="18" fill="#ffb347" opacity="0.7" transform="rotate(135)"/>
-                                <ellipse cx="0" cy="35" rx="8" ry="18" fill="#ff9933" opacity="0.8" transform="rotate(180)"/>
-                                <ellipse cx="-25" cy="25" rx="8" ry="18" fill="#ffb347" opacity="0.7" transform="rotate(225)"/>
-                                <ellipse cx="-35" cy="0" rx="8" ry="18" fill="#ff9933" opacity="0.8" transform="rotate(270)"/>
-                                <ellipse cx="-25" cy="-25" rx="8" ry="18" fill="#ffb347" opacity="0.7" transform="rotate(315)"/>
-                            </g>
-                            
-                            <!-- Middle petals -->
-                            <g>
-                                <ellipse cx="0" cy="-25" rx="5" ry="12" fill="#e6740a" opacity="0.9"/>
-                                <ellipse cx="18" cy="-18" rx="5" ry="12" fill="#fdb462" opacity="0.8" transform="rotate(45)"/>
-                                <ellipse cx="25" cy="0" rx="5" ry="12" fill="#e6740a" opacity="0.9" transform="rotate(90)"/>
-                                <ellipse cx="18" cy="18" rx="5" ry="12" fill="#fdb462" opacity="0.8" transform="rotate(135)"/>
-                                <ellipse cx="0" cy="25" rx="5" ry="12" fill="#e6740a" opacity="0.9" transform="rotate(180)"/>
-                                <ellipse cx="-18" cy="18" rx="5" ry="12" fill="#fdb462" opacity="0.8" transform="rotate(225)"/>
-                                <ellipse cx="-25" cy="0" rx="5" ry="12" fill="#e6740a" opacity="0.9" transform="rotate(270)"/>
-                                <ellipse cx="-18" cy="-18" rx="5" ry="12" fill="#fdb462" opacity="0.8" transform="rotate(315)"/>
-                            </g>
-                            
-                            <!-- Geometric patterns -->
-                            <circle cx="0" cy="0" r="20" fill="none" stroke="#ff9933" stroke-width="1" opacity="0.6"/>
-                            <circle cx="0" cy="0" r="15" fill="none" stroke="#ffb347" stroke-width="1" opacity="0.7"/>
-                            <circle cx="0" cy="0" r="10" fill="none" stroke="#e6740a" stroke-width="1" opacity="0.8"/>
-                            
-                            <!-- Sacred geometry -->
-                            <g opacity="0.5">
-                                <path d="M -10 -10 L 10 10 M 10 -10 L -10 10" stroke="#ff9933" stroke-width="1"/>
-                                <path d="M 0 -15 L 0 15 M -15 0 L 15 0" stroke="#ffb347" stroke-width="1"/>
-                            </g>
-                        </g>
+                        <!-- Tablet body -->
+                        <rect x="40" y="50" width="80" height="60" fill="url(#tabletGrad)" rx="8"/>
                         
-                        <!-- Central lotus with animation -->
-                        <g transform="translate(80,68)">
-                            <ellipse cx="0" cy="0" rx="6" ry="15" fill="#ff9933" transform="rotate(0)" opacity="0.9">
-                                <animateTransform attributeName="transform" type="rotate" values="0;360" dur="20s" repeatCount="indefinite"/>
-                            </ellipse>
-                            <ellipse cx="0" cy="0" rx="6" ry="15" fill="#ffb347" transform="rotate(60)" opacity="0.8">
-                                <animateTransform attributeName="transform" type="rotate" values="60;420" dur="20s" repeatCount="indefinite"/>
-                            </ellipse>
-                            <ellipse cx="0" cy="0" rx="6" ry="15" fill="#ff9933" transform="rotate(120)" opacity="0.9">
-                                <animateTransform attributeName="transform" type="rotate" values="120;480" dur="20s" repeatCount="indefinite"/>
-                            </ellipse>
-                            <circle cx="0" cy="0" r="6" fill="#e6740a" opacity="0.9">
-                                <animate attributeName="opacity" values="0.9;1;0.9" dur="3s" repeatCount="indefinite"/>
+                        <!-- Screen -->
+                        <rect x="45" y="55" width="70" height="50" fill="url(#screenGrad)" rx="4"/>
+                        
+                        <!-- Digital artwork on screen -->
+                        <g opacity="0.8">
+                            <!-- Abstract digital art -->
+                            <circle cx="65" cy="70" r="8" fill="#3498db" opacity="0.6">
+                                <animate attributeName="opacity" values="0.6;0.3;0.6" dur="3s" repeatCount="indefinite"/>
                             </circle>
-                        </g>
-                        
-                        <!-- Brand text -->
-                        <text x="80" y="100" font-family="Crimson Text, serif" font-size="16" font-weight="600" fill="url(#textGrad)" text-anchor="middle">GJ</text>
-                        <text x="80" y="115" font-family="Inter, sans-serif" font-size="9" font-weight="400" fill="#8b5a2b" text-anchor="middle" opacity="0.9">ARTS</text>
-                        
-                        <!-- Decorative dots -->
-                        <circle cx="50" cy="50" r="2" fill="#ff9933" opacity="0.7">
-                            <animate attributeName="opacity" values="0.7;0.3;0.7" dur="2s" repeatCount="indefinite"/>
-                        </circle>
-                        <circle cx="110" cy="55" r="1.5" fill="#ffb347" opacity="0.6">
-                            <animate attributeName="opacity" values="0.6;0.3;0.6" dur="3s" repeatCount="indefinite"/>
-                        </circle>
-                        <circle cx="55" cy="110" r="2" fill="#e6740a" opacity="0.8">
-                            <animate attributeName="opacity" values="0.8;0.3;0.8" dur="2.5s" repeatCount="indefinite"/>
-                        </circle>
-                    </svg>
-                </div>
-                <span class="usage-note">Best for: Premium products, certificates, luxury branding</span>
-                <div class="feature-highlight">✨ Features rotating lotus animation & intricate mandala layers</div>
-            </div>
-
-            <!-- Paisley Fusion Badge -->
-            <div class="badge-section">
-                <h2 class="badge-title">2. Paisley Fusion Badge</h2>
-                <p class="badge-description">Traditional paisley motifs blended with contemporary design, celebrating Indian textile heritage.</p>
-                <div class="badge-container">
-                    <svg viewBox="0 0 160 160" width="160" height="160" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                            <linearGradient id="paisleyBg" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" style="stop-color:#ff9933;stop-opacity:1" />
-                                <stop offset="50%" style="stop-color:#ffb347;stop-opacity:1" />
-                                <stop offset="100%" style="stop-color:#e6740a;stop-opacity:1" />
-                            </linearGradient>
-                            <radialGradient id="paisleyInner" cx="50%" cy="50%" r="50%">
-                                <stop offset="0%" style="stop-color:#fffcf7;stop-opacity:1" />
-                                <stop offset="100%" style="stop-color:#fdf8f0;stop-opacity:1" />
-                            </radialGradient>
-                        </defs>
-                        
-                        <!-- Outer ring with paisley pattern -->
-                        <circle cx="80" cy="80" r="75" fill="url(#paisleyBg)" opacity="0.9"/>
-                        <circle cx="80" cy="80" r="65" fill="url(#paisleyInner)"/>
-                        
-                        <!-- Paisley decorations around the border -->
-                        <g transform="translate(80,80)">
-                            <!-- Top paisley -->
-                            <path d="M 0 -50 Q 15 -60 20 -45 Q 15 -30 0 -40 Q -10 -45 0 -50" fill="#fdb462" opacity="0.8"/>
-                            <!-- Right paisley -->
-                            <path d="M 50 0 Q 60 15 45 20 Q 30 15 40 0 Q 45 -10 50 0" fill="#ff9933" opacity="0.7"/>
-                            <!-- Bottom paisley -->
-                            <path d="M 0 50 Q -15 60 -20 45 Q -15 30 0 40 Q 10 45 0 50" fill="#ffb347" opacity="0.8"/>
-                            <!-- Left paisley -->
-                            <path d="M -50 0 Q -60 -15 -45 -20 Q -30 -15 -40 0 Q -45 10 -50 0" fill="#e6740a" opacity="0.7"/>
-                            
-                            <!-- Diagonal paisleys -->
-                            <g transform="rotate(45)">
-                                <path d="M 0 -35 Q 8 -40 10 -32 Q 8 -24 0 -28 Q -5 -30 0 -35" fill="#ff9933" opacity="0.6"/>
-                                <path d="M 35 0 Q 40 8 32 10 Q 24 8 28 0 Q 30 -5 35 0" fill="#ffb347" opacity="0.6"/>
-                                <path d="M 0 35 Q -8 40 -10 32 Q -8 24 0 28 Q 5 30 0 35" fill="#fdb462" opacity="0.6"/>
-                                <path d="M -35 0 Q -40 -8 -32 -10 Q -24 -8 -28 0 Q -30 5 -35 0" fill="#e6740a" opacity="0.6"/>
-                            </g>
-                        </g>
-                        
-                        <!-- Central design -->
-                        <g transform="translate(80,80)">
-                            <!-- Central circle with pattern -->
-                            <circle cx="0" cy="0" r="30" fill="none" stroke="#ff9933" stroke-width="2" opacity="0.8"/>
-                            <circle cx="0" cy="0" r="22" fill="none" stroke="#ffb347" stroke-width="1" opacity="0.7"/>
-                            
-                            <!-- Central paisley cluster -->
-                            <g opacity="0.9">
-                                <path d="M 0 -15 Q 8 -18 10 -10 Q 8 -2 0 -6 Q -4 -8 0 -15" fill="#ff9933"/>
-                                <path d="M 15 0 Q 18 8 10 10 Q 2 8 6 0 Q 8 -4 15 0" fill="#ffb347"/>
-                                <path d="M 0 15 Q -8 18 -10 10 Q -8 2 0 6 Q 4 8 0 15" fill="#e6740a"/>
-                                <path d="M -15 0 Q -18 -8 -10 -10 Q -2 -8 -6 0 Q -8 4 -15 0" fill="#fdb462"/>
-                            </g>
-                        </g>
-                        
-                        <!-- Lotus center -->
-                        <g transform="translate(80,68)">
-                            <ellipse cx="0" cy="0" rx="4" ry="10" fill="#ff9933" transform="rotate(0)" opacity="0.9"/>
-                            <ellipse cx="0" cy="0" rx="4" ry="10" fill="#ffb347" transform="rotate(90)" opacity="0.8"/>
-                            <circle cx="0" cy="0" r="4" fill="#e6740a" opacity="0.9">
-                                <animate attributeName="opacity" values="0.9;1;0.9" dur="4s" repeatCount="indefinite"/>
+                            <circle cx="85" cy="75" r="6" fill="#e74c3c" opacity="0.7">
+                                <animate attributeName="opacity" values="0.7;0.4;0.7" dur="2.5s" repeatCount="indefinite"/>
                             </circle>
-                        </g>
-                        
-                        <!-- Text -->
-                        <text x="80" y="100" font-family="Crimson Text, serif" font-size="16" font-weight="600" fill="#8b5a2b" text-anchor="middle">GJ</text>
-                        <text x="80" y="115" font-family="Inter, sans-serif" font-size="9" font-weight="400" fill="#8b5a2b" text-anchor="middle" opacity="0.8">ARTS</text>
-                    </svg>
-                </div>
-                <span class="usage-note">Best for: Textiles, cultural products, traditional art</span>
-                <div class="feature-highlight">🎨 Celebrates Indian textile heritage with authentic paisley motifs</div>
-            </div>
-
-            <!-- Peacock Feather Badge -->
-            <div class="badge-section">
-                <h2 class="badge-title">3. Peacock Feather Badge</h2>
-                <p class="badge-description">Inspired by peacock feathers, India's national bird, with elegant curves and vibrant patterns.</p>
-                <div class="badge-container">
-                    <svg viewBox="0 0 160 160" width="160" height="160" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                            <radialGradient id="peacockBg" cx="50%" cy="50%" r="50%">
-                                <stop offset="0%" style="stop-color:#ff9933;stop-opacity:1" />
-                                <stop offset="70%" style="stop-color:#ffb347;stop-opacity:1" />
-                                <stop offset="100%" style="stop-color:#e6740a;stop-opacity:1" />
-                            </radialGradient>
-                            <linearGradient id="featherGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" style="stop-color:#ff9933;stop-opacity:1" />
-                                <stop offset="50%" style="stop-color:#ffb347;stop-opacity:1" />
-                                <stop offset="100%" style="stop-color:#fdb462;stop-opacity:1" />
-                            </linearGradient>
-                        </defs>
-                        
-                        <!-- Base circle -->
-                        <circle cx="80" cy="80" r="75" fill="url(#peacockBg)" opacity="0.85"/>
-                        <circle cx="80" cy="80" r="65" fill="#fffcf7"/>
-                        
-                        <!-- Peacock feather patterns -->
-                        <g transform="translate(80,80)">
-                            <!-- Feather eye patterns -->
-                            <g>
-                                <!-- Top feather eye -->
-                                <ellipse cx="0" cy="-35" rx="12" ry="18" fill="url(#featherGrad)" opacity="0.8"/>
-                                <ellipse cx="0" cy="-35" rx="8" ry="12" fill="#e6740a" opacity="0.9"/>
-                                <ellipse cx="0" cy="-35" rx="4" ry="6" fill="#ff9933" opacity="1"/>
-                                <circle cx="0" cy="-35" r="2" fill="#fffcf7"/>
-                                
-                                <!-- Right feather eye -->
-                                <ellipse cx="35" cy="0" rx="18" ry="12" fill="url(#featherGrad)" opacity="0.8" transform="rotate(90)"/>
-                                <ellipse cx="35" cy="0" rx="12" ry="8" fill="#ffb347" opacity="0.9" transform="rotate(90)"/>
-                                <ellipse cx="35" cy="0" rx="6" ry="4" fill="#e6740a" opacity="1" transform="rotate(90)"/>
-                                <circle cx="35" cy="0" r="2" fill="#fffcf7"/>
-                                
-                                <!-- Bottom feather eye -->
-                                <ellipse cx="0" cy="35" rx="12" ry="18" fill="url(#featherGrad)" opacity="0.8" transform="rotate(180)"/>
-                                <ellipse cx="0" cy="35" rx="8" ry="12" fill="#fdb462" opacity="0.9" transform="rotate(180)"/>
-                                <ellipse cx="0" cy="35" rx="4" ry="6" fill="#ff9933" opacity="1" transform="rotate(180)"/>
-                                <circle cx="0" cy="35" r="2" fill="#fffcf7"/>
-                                
-                                <!-- Left feather eye -->
-                                <ellipse cx="-35" cy="0" rx="18" ry="12" fill="url(#featherGrad)" opacity="0.8" transform="rotate(270)"/>
-                                <ellipse cx="-35" cy="0" rx="12" ry="8" fill="#e6740a" opacity="0.9" transform="rotate(270)"/>
-                                <ellipse cx="-35" cy="0" rx="6" ry="4" fill="#ffb347" opacity="1" transform="rotate(270)"/>
-                                <circle cx="-35" cy="0" r="2" fill="#fffcf7"/>
-                            </g>
-                            
-                            <!-- Feather stems -->
-                            <g stroke="#8b5a2b" stroke-width="2" opacity="0.6">
-                                <path d="M 0 -20 Q 5 -10 0 0" fill="none"/>
-                                <path d="M 20 0 Q 10 5 0 0" fill="none"/>
-                                <path d="M 0 20 Q -5 10 0 0" fill="none"/>
-                                <path d="M -20 0 Q -10 -5 0 0" fill="none"/>
-                            </g>
-                            
-                            <!-- Central decorative ring -->
-                            <circle cx="0" cy="0" r="15" fill="none" stroke="#ff9933" stroke-width="1.5" opacity="0.7"/>
-                            <circle cx="0" cy="0" r="10" fill="none" stroke="#ffb347" stroke-width="1" opacity="0.8"/>
-                        </g>
-                        
-                        <!-- Central lotus -->
-                        <g transform="translate(80,68)">
-                            <ellipse cx="0" cy="0" rx="5" ry="12" fill="#ff9933" transform="rotate(0)" opacity="0.9"/>
-                            <ellipse cx="0" cy="0" rx="5" ry="12" fill="#ffb347" transform="rotate(60)" opacity="0.8"/>
-                            <ellipse cx="0" cy="0" rx="5" ry="12" fill="#e6740a" transform="rotate(120)" opacity="0.9"/>
-                            <circle cx="0" cy="0" r="5" fill="#fdb462" opacity="0.9">
-                                <animate attributeName="opacity" values="0.9;1;0.9" dur="4s" repeatCount="indefinite"/>
+                            <circle cx="95" cy="85" r="5" fill="#f39c12" opacity="0.8">
+                                <animate attributeName="opacity" values="0.8;0.5;0.8" dur="3.5s" repeatCount="indefinite"/>
                             </circle>
+                            
+                            <!-- Vector paths -->
+                            <path d="M 55 85 Q 70 80 85 85" stroke="#9b59b6" stroke-width="2" fill="none" opacity="0.6"/>
+                            <path d="M 60 90 Q 75 95 90 90" stroke="#27ae60" stroke-width="2" fill="none" opacity="0.7"/>
                         </g>
                         
-                        <!-- Text -->
-                        <text x="80" y="100" font-family="Crimson Text, serif" font-size="16" font-weight="600" fill="#8b5a2b" text-anchor="middle">GJ</text>
-                        <text x="80" y="115" font-family="Inter, sans-serif" font-size="9" font-weight="400" fill="#8b5a2b" text-anchor="middle" opacity="0.8">ARTS</text>
+                        <!-- Stylus -->
+                        <g transform="translate(110,40) rotate(30)">
+                            <rect x="0" y="0" width="4" height="30" fill="url(#stylusGrad)" rx="2"/>
+                            <circle cx="2" cy="-2" r="1.5" fill="#2c3e50"/>
+                            <rect x="1" y="25" width="2" height="3" fill="#34495e" rx="1"/>
+                        </g>
                         
-                        <!-- Floating feather elements -->
+                        <!-- Pressure sensitivity indicators -->
                         <g opacity="0.4">
-                            <path d="M 40 40 Q 45 35 50 40 Q 45 45 40 40" fill="#ff9933">
-                                <animateTransform attributeName="transform" type="rotate" values="0 45 40;10 45 40;0 45 40" dur="6s" repeatCount="indefinite"/>
-                            </path>
-                            <path d="M 120 45 Q 115 40 110 45 Q 115 50 120 45" fill="#ffb347">
-                                <animateTransform attributeName="transform" type="rotate" values="0 115 45;-10 115 45;0 115 45" dur="7s" repeatCount="indefinite"/>
-                            </path>
+                            <circle cx="130" cy="70" r="2" fill="#3498db">
+                                <animate attributeName="r" values="2;4;2" dur="2s" repeatCount="indefinite"/>
+                            </circle>
+                            <circle cx="125" cy="85" r="1.5" fill="#e74c3c">
+                                <animate attributeName="r" values="1.5;3;1.5" dur="2.5s" repeatCount="indefinite"/>
+                            </circle>
                         </g>
                     </svg>
                 </div>
-                <span class="usage-note">Best for: Cultural events, traditional celebrations, premium art</span>
-                <div class="feature-highlight">🦚 Honors India's national bird with elegant feather patterns</div>
+                <span class="usage-note">Best for: Digital art studios, UI/UX design, tech companies</span>
+                <div class="feature-highlight">📱 Modern digital creativity with pressure-sensitive stylus</div>
             </div>
 
-            <!-- Sacred Geometry Badge -->
+            <!-- Paper Airplane Art Logo -->
             <div class="badge-section">
-                <h2 class="badge-title">4. Sacred Geometry Badge</h2>
-                <p class="badge-description">Mathematical precision meets spiritual symbolism with yantra-inspired geometric patterns.</p>
+                <h2 class="badge-title">2. Paper Airplane Art</h2>
+                <p class="badge-description">Origami-inspired paper airplane with artistic folds, symbolizing creativity taking flight.</p>
                 <div class="badge-container">
                     <svg viewBox="0 0 160 160" width="160" height="160" xmlns="http://www.w3.org/2000/svg">
                         <defs>
-                            <linearGradient id="geometryBg" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" style="stop-color:#ff9933;stop-opacity:1" />
-                                <stop offset="100%" style="stop-color:#cc4400;stop-opacity:1" />
+                            <linearGradient id="paperGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+                                <stop offset="50%" style="stop-color:#f8f9fa;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#e9ecef;stop-opacity:1" />
                             </linearGradient>
-                            <radialGradient id="geometryInner" cx="50%" cy="50%" r="50%">
-                                <stop offset="0%" style="stop-color:#fffcf7;stop-opacity:1" />
-                                <stop offset="100%" style="stop-color:#fdf8f0;stop-opacity:1" />
-                            </radialGradient>
+                            <linearGradient id="foldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#3498db;stop-opacity:0.8" />
+                                <stop offset="50%" style="stop-color:#2980b9;stop-opacity:0.6" />
+                                <stop offset="100%" style="stop-color:#1abc9c;stop-opacity:0.4" />
+                            </linearGradient>
                         </defs>
                         
-                        <!-- Base -->
-                        <circle cx="80" cy="80" r="75" fill="url(#geometryBg)" opacity="0.9"/>
-                        <circle cx="80" cy="80" r="65" fill="url(#geometryInner)"/>
+                        <!-- Background circle -->
+                        <circle cx="80" cy="80" r="75" fill="#ffffff" stroke="#e0e0e0" stroke-width="2"/>
                         
-                        <!-- Sacred geometry patterns -->
+                        <!-- Paper airplane body -->
                         <g transform="translate(80,80)">
-                            <!-- Outer hexagon -->
-                            <polygon points="0,-40 35,-20 35,20 0,40 -35,20 -35,-20" fill="none" stroke="#ff9933" stroke-width="2" opacity="0.8"/>
+                            <!-- Main airplane shape -->
+                            <polygon points="-30,0 30,-15 30,15" fill="url(#paperGrad)" stroke="#bdc3c7" stroke-width="1"/>
                             
-                            <!-- Inner triangles (Sri Yantra inspired) -->
-                            <g opacity="0.7">
-                                <!-- Upward triangles -->
-                                <polygon points="0,-25 22,12 -22,12" fill="none" stroke="#ffb347" stroke-width="1.5"/>
-                                <polygon points="0,-15 13,7 -13,7" fill="none" stroke="#e6740a" stroke-width="1"/>
-                                
-                                <!-- Downward triangles -->
-                                <polygon points="0,25 -22,-12 22,-12" fill="none" stroke="#fdb462" stroke-width="1.5"/>
-                                <polygon points="0,15 -13,-7 13,-7" fill="none" stroke="#ff9933" stroke-width="1"/>
-                            </g>
+                            <!-- Fold lines creating depth -->
+                            <polygon points="-30,0 0,-8 30,-15 0,0" fill="url(#foldGrad)" opacity="0.7">
+                                <animate attributeName="opacity" values="0.7;0.4;0.7" dur="3s" repeatCount="indefinite"/>
+                            </polygon>
+                            <polygon points="-30,0 0,8 30,15 0,0" fill="url(#foldGrad)" opacity="0.5">
+                                <animate attributeName="opacity" values="0.5;0.2;0.5" dur="3.5s" repeatCount="indefinite"/>
+                            </polygon>
                             
-                            <!-- Central star pattern -->
-                            <g opacity="0.8">
-                                <polygon points="0,-12 3,-3 12,0 3,3 0,12 -3,3 -12,0 -3,-3" fill="#ff9933" opacity="0.6"/>
-                                <circle cx="0" cy="0" r="8" fill="none" stroke="#ffb347" stroke-width="1"/>
-                                <circle cx="0" cy="0" r="5" fill="none" stroke="#e6740a" stroke-width="1"/>
-                            </g>
+                            <!-- Central fold line -->
+                            <line x1="-30" y1="0" x2="30" y2="0" stroke="#7f8c8d" stroke-width="1" opacity="0.6"/>
                             
-                            <!-- Geometric dots -->
-                            <g fill="#ff9933" opacity="0.6">
-                                <circle cx="0" cy="-30" r="2"/>
-                                <circle cx="26" cy="-15" r="2"/>
-                                <circle cx="26" cy="15" r="2"/>
-                                <circle cx="0" cy="30" r="2"/>
-                                <circle cx="-26" cy="15" r="2"/>
-                                <circle cx="-26" cy="-15" r="2"/>
-                            </g>
+                            <!-- Wing fold details -->
+                            <line x1="-15" y1="-4" x2="15" y2="-8" stroke="#95a5a6" stroke-width="0.8" opacity="0.8"/>
+                            <line x1="-15" y1="4" x2="15" y2="8" stroke="#95a5a6" stroke-width="0.8" opacity="0.8"/>
                         </g>
                         
-                        <!-- Animated central lotus -->
-                        <g transform="translate(80,68)">
-                            <ellipse cx="0" cy="0" rx="4" ry="10" fill="#ff9933" transform="rotate(0)" opacity="0.9">
-                                <animateTransform attributeName="transform" type="rotate" values="0;120;240;360" dur="12s" repeatCount="indefinite"/>
-                            </ellipse>
-                            <ellipse cx="0" cy="0" rx="4" ry="10" fill="#ffb347" transform="rotate(120)" opacity="0.8">
-                                <animateTransform attributeName="transform" type="rotate" values="120;240;360;480" dur="12s" repeatCount="indefinite"/>
-                            </ellipse>
-                            <ellipse cx="0" cy="0" rx="4" ry="10" fill="#e6740a" transform="rotate(240)" opacity="0.9">
-                                <animateTransform attributeName="transform" type="rotate" values="240;360;480;600" dur="12s" repeatCount="indefinite"/>
-                            </ellipse>
-                            <circle cx="0" cy="0" r="4" fill="#fdb462" opacity="0.9">
-                                <animate attributeName="opacity" values="0.9;1;0.9" dur="3s" repeatCount="indefinite"/>
+                        <!-- Flight path trail -->
+                        <g opacity="0.6">
+                            <path d="M 30 80 Q 40 75 50 80 Q 60 85 70 80" stroke="#3498db" stroke-width="2" fill="none" stroke-dasharray="3,3" opacity="0.7">
+                                <animate attributeName="stroke-dashoffset" values="0;12" dur="2s" repeatCount="indefinite"/>
+                            </path>
+                            <circle cx="35" cy="78" r="2" fill="#3498db" opacity="0.5">
+                                <animate attributeName="opacity" values="0.5;0.1;0.5" dur="2s" repeatCount="indefinite"/>
+                            </circle>
+                            <circle cx="45" cy="82" r="1.5" fill="#2980b9" opacity="0.6">
+                                <animate attributeName="opacity" values="0.6;0.2;0.6" dur="2.5s" repeatCount="indefinite"/>
                             </circle>
                         </g>
                         
-                        <!-- Text -->
-                        <text x="80" y="100" font-family="Crimson Text, serif" font-size="16" font-weight="600" fill="#8b5a2b" text-anchor="middle">GJ</text>
-                        <text x="80" y="115" font-family="Inter, sans-serif" font-size="9" font-weight="400" fill="#8b5a2b" text-anchor="middle" opacity="0.8">ARTS</text>
+                        <!-- Creative sparks -->
+                        <g opacity="0.8">
+                            <g transform="translate(120,60)">
+                                <path d="M 0,-4 L 2,0 L 0,4 L -2,0 Z" fill="#f39c12">
+                                    <animateTransform attributeName="transform" type="rotate" values="0;360" dur="4s" repeatCount="indefinite"/>
+                                </path>
+                            </g>
+                            <g transform="translate(130,100)">
+                                <path d="M 0,-3 L 1.5,0 L 0,3 L -1.5,0 Z" fill="#e74c3c">
+                                    <animateTransform attributeName="transform" type="rotate" values="0;-360" dur="5s" repeatCount="indefinite"/>
+                                </path>
+                            </g>
+                        </g>
                     </svg>
                 </div>
-                <span class="usage-note">Best for: Spiritual art, meditation centers, yoga studios</span>
-                <div class="feature-highlight">🔯 Features Sri Yantra-inspired sacred geometry patterns</div>
+                <span class="usage-note">Best for: Creative agencies, innovation labs, startup companies</span>
+                <div class="feature-highlight">✈️ Origami artistry representing ideas taking flight</div>
             </div>
 
-            <!-- Vintage Stamp Badge -->
+            <!-- Geometric Crystal Logo -->
             <div class="badge-section">
-                <h2 class="badge-title">5. Vintage Stamp Style</h2>
-                <p class="badge-description">Classic postage stamp aesthetic with perforated edges and traditional Indian motifs.</p>
+                <h2 class="badge-title">3. Geometric Crystal Art</h2>
+                <p class="badge-description">Multi-faceted crystal with prismatic colors, representing precision, beauty, and artistic transformation.</p>
+                <div class="badge-container">
+                    <svg viewBox="0 0 160 160" width="160" height="160" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="crystal1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#ff6b6b;stop-opacity:0.8" />
+                                <stop offset="100%" style="stop-color:#ee5a24;stop-opacity:0.6" />
+                            </linearGradient>
+                            <linearGradient id="crystal2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#4834d4;stop-opacity:0.8" />
+                                <stop offset="100%" style="stop-color:#686de0;stop-opacity:0.6" />
+                            </linearGradient>
+                            <linearGradient id="crystal3" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#00d2d3;stop-opacity:0.8" />
+                                <stop offset="100%" style="stop-color:#01a3a4;stop-opacity:0.6" />
+                            </linearGradient>
+                            <linearGradient id="crystal4" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#feca57;stop-opacity:0.8" />
+                                <stop offset="100%" style="stop-color:#ff9ff3;stop-opacity:0.6" />
+                            </linearGradient>
+                        </defs>
+                        
+                        <!-- Background circle -->
+                        <circle cx="80" cy="80" r="75" fill="#ffffff" stroke="#e0e0e0" stroke-width="2"/>
+                        
+                        <!-- Main crystal structure -->
+                        <g transform="translate(80,80)">
+                            <!-- Top facet -->
+                            <polygon points="0,-35 -20,-10 20,-10" fill="url(#crystal1)" opacity="0.9">
+                                <animate attributeName="opacity" values="0.9;0.6;0.9" dur="3s" repeatCount="indefinite"/>
+                            </polygon>
+                            
+                            <!-- Left facet -->
+                            <polygon points="-20,-10 -30,15 0,25 0,0" fill="url(#crystal2)" opacity="0.8">
+                                <animate attributeName="opacity" values="0.8;0.5;0.8" dur="3.5s" repeatCount="indefinite"/>
+                            </polygon>
+                            
+                            <!-- Right facet -->
+                            <polygon points="20,-10 30,15 0,25 0,0" fill="url(#crystal3)" opacity="0.85">
+                                <animate attributeName="opacity" values="0.85;0.55;0.85" dur="2.8s" repeatCount="indefinite"/>
+                            </polygon>
+                            
+                            <!-- Bottom left facet -->
+                            <polygon points="-30,15 -15,35 0,25" fill="url(#crystal4)" opacity="0.7">
+                                <animate attributeName="opacity" values="0.7;0.4;0.7" dur="4s" repeatCount="indefinite"/>
+                            </polygon>
+                            
+                            <!-- Bottom right facet -->
+                            <polygon points="30,15 15,35 0,25" fill="url(#crystal1)" opacity="0.75">
+                                <animate attributeName="opacity" values="0.75;0.45;0.75" dur="3.2s" repeatCount="indefinite"/>
+                            </polygon>
+                            
+                            <!-- Central highlight lines -->
+                            <g stroke="#ffffff" stroke-width="1" opacity="0.8">
+                                <line x1="0" y1="-35" x2="0" y2="25"/>
+                                <line x1="-20" y1="-10" x2="20" y2="-10"/>
+                                <line x1="-30" y1="15" x2="30" y2="15"/>
+                            </g>
+                        </g>
+                        
+                        <!-- Prismatic light reflections -->
+                        <g opacity="0.6">
+                            <circle cx="50" cy="50" r="3" fill="#ff6b6b">
+                                <animate attributeName="opacity" values="0.6;0.2;0.6" dur="2s" repeatCount="indefinite"/>
+                            </circle>
+                            <circle cx="110" cy="60" r="2.5" fill="#4834d4">
+                                <animate attributeName="opacity" values="0.4;0.8;0.4" dur="2.5s" repeatCount="indefinite"/>
+                            </circle>
+                            <circle cx="120" cy="100" r="2" fill="#00d2d3">
+                                <animate attributeName="opacity" values="0.5;0.1;0.5" dur="3s" repeatCount="indefinite"/>
+                            </circle>
+                            <circle cx="40" cy="110" r="2.5" fill="#feca57">
+                                <animate attributeName="opacity" values="0.7;0.3;0.7" dur="2.2s" repeatCount="indefinite"/>
+                            </circle>
+                        </g>
+                        
+                        <!-- Geometric accent lines -->
+                        <g stroke="#95a5a6" stroke-width="1" opacity="0.3">
+                            <line x1="30" y1="30" x2="40" y2="40"/>
+                            <line x1="130" y1="30" x2="120" y2="40"/>
+                            <line x1="30" y1="130" x2="40" y2="120"/>
+                            <line x1="130" y1="130" x2="120" y2="120"/>
+                        </g>
+                    </svg>
+                </div>
+                <span class="usage-note">Best for: Luxury brands, jewelry design, architectural firms</span>
+                <div class="feature-highlight">🔸 Precision and beauty through geometric transformation</div>
+            </div>
+
+            <!-- Pencil & Design Logo -->
+            <div class="badge-section">
+                <h2 class="badge-title">4. Pencil & Design Logo</h2>
+                <p class="badge-description">Clean pencil design with creative flourishes, perfect for design agencies and artistic services.</p>
+                <div class="badge-container">
+                    <svg viewBox="0 0 160 160" width="160" height="160" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="pencilGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#ffd700;stop-opacity:1" />
+                                <stop offset="50%" style="stop-color:#ffed4a;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#f39c12;stop-opacity:1" />
+                            </linearGradient>
+                            <linearGradient id="tipGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#2c3e50;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#34495e;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        
+                        <!-- Background circle -->
+                        <circle cx="80" cy="80" r="75" fill="#ffffff" stroke="#e0e0e0" stroke-width="2"/>
+                        
+                        <!-- Pencil body -->
+                        <rect x="70" y="30" width="20" height="80" fill="url(#pencilGrad)" rx="10"/>
+                        
+                        <!-- Pencil tip -->
+                        <polygon points="70,30 80,15 90,30" fill="url(#tipGrad)"/>
+                        
+                        <!-- Metal ferrule -->
+                        <rect x="70" y="110" width="20" height="8" fill="#c0c0c0" rx="1"/>
+                        
+                        <!-- Eraser -->
+                        <rect x="72" y="118" width="16" height="6" fill="#e74c3c" rx="3"/>
+                        
+                        <!-- Pencil details -->
+                        <rect x="75" y="35" width="10" height="70" fill="url(#pencilGrad)" opacity="0.8"/>
+                        <text x="80" y="75" font-family="Inter, sans-serif" font-size="8" font-weight="bold" fill="#2c3e50" text-anchor="middle" opacity="0.7">ART</text>
+                        
+                        <!-- Creative flourishes -->
+                        <g opacity="0.6">
+                            <!-- Sparkles -->
+                            <g transform="translate(45,45)">
+                                <path d="M 0,-5 L 2,0 L 0,5 L -2,0 Z" fill="#f39c12">
+                                    <animateTransform attributeName="transform" type="rotate" values="0;360" dur="4s" repeatCount="indefinite"/>
+                                </path>
+                            </g>
+                            <g transform="translate(115,50)">
+                                <path d="M 0,-4 L 1.5,0 L 0,4 L -1.5,0 Z" fill="#e74c3c">
+                                    <animateTransform attributeName="transform" type="rotate" values="0;-360" dur="5s" repeatCount="indefinite"/>
+                                </path>
+                            </g>
+                            <g transform="translate(50,110)">
+                                <path d="M 0,-3 L 1,0 L 0,3 L -1,0 Z" fill="#3498db">
+                                    <animateTransform attributeName="transform" type="rotate" values="0;360" dur="3s" repeatCount="indefinite"/>
+                                </path>
+                            </g>
+                            
+                            <!-- Design lines -->
+                            <path d="M 30 70 Q 40 65 50 70" stroke="#3498db" stroke-width="2" fill="none" opacity="0.7">
+                                <animate attributeName="opacity" values="0.7;0.3;0.7" dur="3s" repeatCount="indefinite"/>
+                            </path>
+                            <path d="M 110 75 Q 120 70 130 75" stroke="#e74c3c" stroke-width="2" fill="none" opacity="0.8">
+                                <animate attributeName="opacity" values="0.8;0.4;0.8" dur="3.5s" repeatCount="indefinite"/>
+                            </path>
+                            <path d="M 35 95 Q 45 90 55 95" stroke="#27ae60" stroke-width="2" fill="none" opacity="0.6">
+                                <animate attributeName="opacity" values="0.6;0.2;0.6" dur="4s" repeatCount="indefinite"/>
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+                <span class="usage-note">Best for: Design agencies, writing services, educational content</span>
+                <div class="feature-highlight">✏️ Classic tool of creativity with modern design elements</div>
+            </div>
+
+            <!-- Camera & Art Logo -->
+            <div class="badge-section">
+                <h2 class="badge-title">5. Camera & Art Logo</h2>
+                <p class="badge-description">Modern photography meets traditional art, perfect for visual artists and multimedia creators.</p>
                 <div class="badge-container">
                     <svg viewBox="0 0 160 160" width="160" height="160" xmlns="http://www.w3.org/2000/svg">
                         <defs>
@@ -609,10 +569,10 @@
                 <div class="feature-highlight">📮 Authentic postage stamp design with perforated edges</div>
             </div>
 
-            <!-- Contemporary Minimal Badge -->
+            <!-- Creative Spark Logo -->
             <div class="badge-section">
-                <h2 class="badge-title">6. Contemporary Minimal</h2>
-                <p class="badge-description">Modern minimalist approach while preserving cultural essence - perfect for digital applications.</p>
+                <h2 class="badge-title">6. Creative Spark Logo</h2>
+                <p class="badge-description">Abstract spark of creativity with geometric elements, representing innovation and artistic inspiration.</p>
                 <div class="badge-container">
                     <svg viewBox="0 0 160 160" width="160" height="160" xmlns="http://www.w3.org/2000/svg">
                         <defs>

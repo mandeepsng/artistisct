@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Website - Logo Variations</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            margin-bottom: 3rem;
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .logo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .logo-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .logo-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        .logo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: bold;
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .logo-1 {
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+        }
+
+        .logo-2 {
+            background: linear-gradient(45deg, #4834d4, #686de0);
+        }
+
+        .logo-3 {
+            background: linear-gradient(45deg, #00d2d3, #54a0ff);
+        }
+
+        .logo-4 {
+            background: linear-gradient(45deg, #ff9ff3, #f368e0);
+        }
+
+        .logo-5 {
+            background: linear-gradient(45deg, #3742fa, #2f3542);
+        }
+
+        .logo-6 {
+            background: linear-gradient(45deg, #2ed573, #7bed9f);
+        }
+
+        .logo-title {
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .logo-description {
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        .brush-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+            font-size: 3rem;
+        }
+
+        .palette-icon {
+            position: relative;
+        }
+
+        .palette-icon::before {
+            content: "<�";
+            font-size: 3rem;
+        }
+
+        .pencil-icon {
+            font-size: 3rem;
+            transform: rotate(45deg);
+        }
+
+        .geometric {
+            position: relative;
+        }
+
+        .geometric::before {
+            content: "";
+            position: absolute;
+            top: 20%;
+            left: 20%;
+            right: 20%;
+            bottom: 20%;
+            border: 3px solid white;
+            border-radius: 50%;
+        }
+
+        .geometric::after {
+            content: "";
+            position: absolute;
+            top: 35%;
+            left: 35%;
+            right: 35%;
+            bottom: 35%;
+            background: white;
+            border-radius: 50%;
+        }
+
+        .camera-icon {
+            font-size: 3rem;
+        }
+
+        .paint-splash {
+            position: relative;
+            overflow: visible;
+        }
+
+        .paint-splash::before {
+            content: "=�";
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            font-size: 1.5rem;
+            transform: rotate(45deg);
+        }
+
+        .paint-splash::after {
+            content: "✨";
+            position: absolute;
+            bottom: -5px;
+            left: -5px;
+            font-size: 1rem;
+        }
+
+        .canvas-art {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .girl-artist {
+            position: relative;
+            width: 80px;
+            height: 80px;
+            margin: 0 auto;
+        }
+
+        .girl-head {
+            width: 30px;
+            height: 30px;
+            background: #fdbcb4;
+            border-radius: 50%;
+            position: absolute;
+            top: 10px;
+            left: 25px;
+        }
+
+        .girl-hair {
+            width: 35px;
+            height: 25px;
+            background: #8b4513;
+            border-radius: 50% 50% 30% 30%;
+            position: absolute;
+            top: 5px;
+            left: 22px;
+        }
+
+        .girl-body {
+            width: 25px;
+            height: 35px;
+            background: #ff69b4;
+            border-radius: 10px;
+            position: absolute;
+            top: 35px;
+            left: 27px;
+        }
+
+        .brush-hand {
+            width: 15px;
+            height: 3px;
+            background: #8b4513;
+            position: absolute;
+            top: 40px;
+            right: 15px;
+            transform: rotate(-30deg);
+        }
+
+        .brush-hand::after {
+            content: "";
+            width: 8px;
+            height: 2px;
+            background: #ffd700;
+            position: absolute;
+            right: -5px;
+            top: 0;
+        }
+
+        .paint-dots {
+            position: absolute;
+        }
+
+        .paint-dots::before {
+            content: "🔴";
+            position: absolute;
+            top: -20px;
+            left: -10px;
+            font-size: 8px;
+        }
+
+        .paint-dots::after {
+            content: "🔵 🟡";
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            font-size: 6px;
+        }
+
+        .easel-design {
+            position: relative;
+        }
+
+        .easel {
+            width: 60px;
+            height: 70px;
+            position: relative;
+            margin: 0 auto;
+        }
+
+        .easel-legs {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .easel-legs::before {
+            content: "";
+            width: 2px;
+            height: 40px;
+            background: #8b4513;
+            position: absolute;
+            left: -15px;
+            transform: rotate(-15deg);
+        }
+
+        .easel-legs::after {
+            content: "";
+            width: 2px;
+            height: 40px;
+            background: #8b4513;
+            position: absolute;
+            right: -15px;
+            transform: rotate(15deg);
+        }
+
+        .canvas-board {
+            width: 35px;
+            height: 30px;
+            background: white;
+            border: 2px solid #8b4513;
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .canvas-painting {
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            right: 3px;
+            bottom: 3px;
+            background: linear-gradient(45deg, #ff6b6b 30%, #4ecdc4 60%, #ffe66d 90%);
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ArtCraft - Logo Variations</h1>
+        
+        <div class="logo-grid">
+            <div class="logo-card">
+                <div class="logo logo-1">
+                    <div class="brush-icon">=�</div>
+                </div>
+                <h3 class="logo-title">Brush & Passion</h3>
+                <p class="logo-description">Dynamic gradient with brush icon representing the creative energy and artistic passion of the brand.</p>
+            </div>
+
+            <div class="logo-card">
+                <div class="logo logo-2">
+                    <div class="palette-icon"></div>
+                </div>
+                <h3 class="logo-title">Color Palette</h3>
+                <p class="logo-description">Professional purple gradient with artist palette emoji, symbolizing creativity and artistic tools.</p>
+            </div>
+
+            <div class="logo-card">
+                <div class="logo logo-3 canvas-art">
+                    <div class="girl-artist">
+                        <div class="girl-hair"></div>
+                        <div class="girl-head"></div>
+                        <div class="girl-body"></div>
+                        <div class="brush-hand"></div>
+                        <div class="paint-dots"></div>
+                    </div>
+                </div>
+                <h3 class="logo-title">Girl Artist</h3>
+                <p class="logo-description">Creative girl artist with brush and colorful paint dots, representing artistic passion and creativity.</p>
+            </div>
+
+            <div class="logo-card">
+                <div class="logo logo-4 easel-design">
+                    <div class="easel">
+                        <div class="easel-legs"></div>
+                        <div class="canvas-board">
+                            <div class="canvas-painting"></div>
+                        </div>
+                    </div>
+                </div>
+                <h3 class="logo-title">Canvas & Easel</h3>
+                <p class="logo-description">Professional easel with colorful canvas painting, representing traditional art studio and creative workspace.</p>
+            </div>
+
+            <div class="logo-card">
+                <div class="logo logo-5">
+                    <div class="camera-icon">📷</div>
+                </div>
+                <h3 class="logo-title">Visual Arts</h3>
+                <p class="logo-description">Professional dark gradient with camera icon, representing photography and visual art documentation.</p>
+            </div>
+
+            <div class="logo-card">
+                <div class="logo logo-6 paint-splash">
+                    <div style="font-size: 2.5rem; display: flex; gap: 5px; align-items: center;">
+                        🎨<span style="font-size: 1.5rem;">🖌️</span>
+                    </div>
+                </div>
+                <h3 class="logo-title">Creative Arts</h3>
+                <p class="logo-description">Vibrant green gradient with theater masks icon and decorative paint splash elements for creative expression.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
