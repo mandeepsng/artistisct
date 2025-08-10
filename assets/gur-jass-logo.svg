@@ -1,0 +1,73 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="canvasGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fdf8f0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fffcf7;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="brushGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b5a2b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#cc6914;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#d4830a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e49547;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="95" fill="rgba(253, 248, 240, 0.1)" stroke="url(#textGradient)" stroke-width="1" opacity="0.3"/>
+  
+  <!-- Canvas/easel -->
+  <rect x="70" y="60" width="60" height="45" rx="3" fill="url(#canvasGradient)" stroke="#e8a870" stroke-width="1.5"/>
+  
+  <!-- Paint brushes -->
+  <!-- Brush 1 -->
+  <rect x="40" y="70" width="4" height="45" fill="url(#brushGradient)" transform="rotate(-15 42 92)"/>
+  <ellipse cx="40" cy="68" rx="5" ry="3" fill="#d4830a" transform="rotate(-15 40 68)"/>
+  <rect x="38" cy="64" width="6" height="2" fill="#2c2c2c" transform="rotate(-15 40 64)"/>
+  
+  <!-- Brush 2 -->
+  <rect x="50" y="75" width="4" height="40" fill="url(#brushGradient)" transform="rotate(-30 52 95)"/>
+  <ellipse cx="50" cy="73" rx="5" ry="3" fill="#f4b942" transform="rotate(-30 50 73)"/>
+  <rect x="48" cy="69" width="6" height="2" fill="#2c2c2c" transform="rotate(-30 50 69)"/>
+  
+  <!-- Brush 3 -->
+  <rect x="155" y="65" width="4" height="50" fill="url(#brushGradient)" transform="rotate(25 157 90)"/>
+  <ellipse cx="155" cy="63" rx="5" ry="3" fill="#e49547" transform="rotate(25 155 63)"/>
+  <rect x="153" cy="59" width="6" height="2" fill="#2c2c2c" transform="rotate(25 155 59)"/>
+  
+  <!-- Paint palette -->
+  <ellipse cx="140" cy="135" rx="18" ry="12" fill="url(#canvasGradient)" stroke="#e8a870" stroke-width="1.5"/>
+  <circle cx="130" cy="130" r="3" fill="#dc3545"/>
+  <circle cx="145" cy="132" r="3" fill="#007bff"/>
+  <circle cx="135" cy="140" r="3" fill="#28a745"/>
+  <circle cx="150" cy="135" r="2.5" fill="#6f42c1"/>
+  <circle cx="125" cy="135" r="2.5" fill="#fd7e14"/>
+  <circle cx="152" cy="130" r="2.5" fill="#f4b942"/>
+  <circle cx="140" cy="128" r="2" fill="#20c997"/>
+  <circle cx="147" cy="140" r="2" fill="#e83e8c"/>
+  <circle cx="133" cy="133" r="2" fill="#ffc107"/>
+  <circle cx="142" cy="135" r="1.5" fill="#17a2b8"/>
+  <circle cx="138" cy="137" r="1.5" fill="#6c757d"/>
+  
+  <!-- Paint splashes/drops -->
+  <circle cx="85" cy="45" r="2" fill="#f4b942" opacity="0.7"/>
+  <circle cx="115" cy="50" r="1.5" fill="#d4830a" opacity="0.6"/>
+  <circle cx="95" cy="140" r="1.5" fill="#e49547" opacity="0.8"/>
+  <circle cx="110" cy="145" r="1" fill="#cc6914" opacity="0.5"/>
+  
+  <!-- Color strokes on canvas -->
+  <path d="M75 70 Q85 75, 90 70" stroke="#d4830a" stroke-width="1.5" fill="none" opacity="0.6"/>
+  <path d="M80 80 Q90 78, 100 82" stroke="#f4b942" stroke-width="1.2" fill="none" opacity="0.5"/>
+  <path d="M75 90 Q95 88, 110 90" stroke="#e49547" stroke-width="1" fill="none" opacity="0.7"/>
+  
+  <!-- Text -->
+  <text x="100" y="125" text-anchor="middle" font-family="Playfair Display, serif" font-size="28" font-weight="500" fill="url(#textGradient)">Gur Jass</text>
+  
+  <!-- Decorative paint drops -->
+  <circle cx="70" cy="140" r="1" fill="#f2c373" opacity="0.6"/>
+  <circle cx="130" cy="140" r="1" fill="#e6a55c" opacity="0.6"/>
+  
+  <!-- Artistic flourish -->
+  <path d="M100 135 Q85 140, 100 145 Q115 140, 100 135" fill="none" stroke="url(#textGradient)" stroke-width="0.8" opacity="0.4"/>
+</svg>
