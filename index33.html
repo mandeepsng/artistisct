@@ -28,12 +28,29 @@
             --warm-brown: #8b5a2b;
         }
 
+        /* Custom Brush Cursor */
         body {
             font-family: 'Inter', sans-serif;
             line-height: 1.6;
             color: var(--charcoal);
             background: linear-gradient(135deg, var(--warm-white) 0%, var(--soft-cream) 100%);
             overflow-x: hidden;
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23d4830a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9.06 11.9 8.07-8.06a2.85 2.85 0 1 1 4.03 4.03l-8.06 8.08"/><path d="m15 5 4 4"/><path d="m2 21 6-6 4 4-6 6"/><path d="m5 19 4-4"/></svg>') 2 22, auto;
+        }
+
+        /* Brush cursor variations for different elements */
+        a, button, .artwork-item, .nav-item, .cta-button {
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="%23cc6914" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9.06 11.9 8.07-8.06a2.85 2.85 0 1 1 4.03 4.03l-8.06 8.08"/><path d="m15 5 4 4"/><path d="m2 21 6-6 4 4-6 6"/><path d="m5 19 4-4"/></svg>') 2 26, pointer;
+        }
+
+        /* Alternative paintbrush cursor for artwork items */
+        .artwork-item {
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="%23d4830a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18.37 2.63 14 7l-1.59-1.59a2 2 0 0 0-2.82 0L8 7l9 9 1.59-1.59a2 2 0 0 0 0-2.82L17 10l4.37-4.37a2.12 2.12 0 1 0-3-3Z"/><path d="M9 8c-2 3-4 3.5-7 4l8 10c2-1 6-5 6-7"/><path d="M14.5 17.5 4.5 15"/></svg>') 4 28, pointer;
+        }
+
+        /* Text selection cursor */
+        p, h1, h2, h3, span, div {
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="%23d4830a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9.06 11.9 8.07-8.06a2.85 2.85 0 1 1 4.03 4.03l-8.06 8.08"/><path d="m15 5 4 4"/><path d="m2 21 6-6 4 4-6 6"/><path d="m5 19 4-4"/></svg>') 2 18, text;
         }
 
         /* Sidebar Navigation */
@@ -155,8 +172,7 @@
             height: 200px;
             border-radius: 50%;
             margin: 0 auto 2rem;
-            /* background-image: url('https://images.unsplash.com/photo-1536924940846-227afb31e2a5?w=400&h=400&fit=crop&auto=format'); */
-            background-image: url('assets/logo1.jpg');
+            background-image: url('https://images.unsplash.com/photo-1536924940846-227afb31e2a5?w=400&h=400&fit=crop&auto=format');
             background-size: cover;
             background-position: center;
             opacity: 0;
@@ -172,7 +188,6 @@
             border-radius: 50px;
             font-size: 1rem;
             font-weight: 500;
-            cursor: pointer;
             transition: all 0.4s ease;
             text-decoration: none;
             display: inline-block;
@@ -310,7 +325,6 @@
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(212, 131, 10, 0.1);
             transition: all 0.4s ease;
-            cursor: pointer;
         }
 
         .artwork-item:hover {
@@ -637,6 +651,40 @@
             .about, .gallery, .process, .testimonials {
                 padding: 4rem 0;
             }
+
+            /* Fallback to default cursor on mobile */
+            body, a, button, .artwork-item, .nav-item, .cta-button, p, h1, h2, h3, span, div {
+                cursor: auto;
+            }
+        }
+
+        /* Enhanced brush cursor effects */
+        .brush-trail {
+            position: fixed;
+            width: 8px;
+            height: 8px;
+            background: var(--primary-amber);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.6;
+            animation: brushFade 1.2s ease-out forwards;
+        }
+
+        @keyframes brushFade {
+            0% { 
+                opacity: 0.6; 
+                transform: scale(1); 
+            }
+            100% { 
+                opacity: 0; 
+                transform: scale(0.2); 
+            }
+        }
+
+        /* Special cursor for dragging/active states */
+        body:active {
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="%23d4830a" stroke="%23cc6914" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9.06 11.9 8.07-8.06a2.85 2.85 0 1 1 4.03 4.03l-8.06 8.08"/><path d="m15 5 4 4"/><path d="m2 21 6-6 4 4-6 6"/><path d="m5 19 4-4"/></svg>') 2 26, auto;
         }
     </style>
 </head>
@@ -967,7 +1015,7 @@
 
             navItems.forEach(item => {
                 item.classList.remove('active');
-                if (item.getAttribute('href') === `#${current}`) {
+                if (item.getAttribu ate('href') === `#${current}`) {
                     item.classList.add('active');
                 }
             });
@@ -986,38 +1034,125 @@
         `;
         document.head.appendChild(navStyle);
 
-        // Cursor trail effect (optional enhancement)
+        // Enhanced brush trail effect for artistic cursor
+        let brushTrailTimeout;
         document.addEventListener('mousemove', (e) => {
-            const cursor = document.createElement('div');
-            cursor.style.cssText = `
-                position: fixed;
-                top: ${e.clientY}px;
-                left: ${e.clientX}px;
-                width: 6px;
-                height: 6px;
-                background: var(--primary-amber);
-                border-radius: 50%;
-                pointer-events: none;
-                z-index: 9999;
-                opacity: 0.7;
-                animation: cursorFade 0.8s ease-out forwards;
-            `;
-            document.body.appendChild(cursor);
-            
-            setTimeout(() => {
-                cursor.remove();
-            }, 800);
+            // Only create brush trails on desktop
+            if (window.innerWidth > 768) {
+                clearTimeout(brushTrailTimeout);
+                brushTrailTimeout = setTimeout(() => {
+                    const trail = document.createElement('div');
+                    trail.className = 'brush-trail';
+                    trail.style.left = e.clientX - 4 + 'px';
+                    trail.style.top = e.clientY - 4 + 'px';
+                    
+                    // Add slight randomness to make it more organic
+                    const offsetX = (Math.random() - 0.5) * 6;
+                    const offsetY = (Math.random() - 0.5) * 6;
+                    trail.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
+                    
+                    document.body.appendChild(trail);
+                    
+                    setTimeout(() => {
+                        if (trail.parentNode) {
+                            trail.remove();
+                        }
+                    }, 1200);
+                }, 50);
+            }
         });
 
-        // Add cursor fade animation
-        const cursorStyle = document.createElement('style');
-        cursorStyle.textContent = `
-            @keyframes cursorFade {
-                0% { opacity: 0.7; transform: scale(1); }
-                100% { opacity: 0; transform: scale(0.3); }
+        // Special brush effect when clicking on artwork
+        document.querySelectorAll('.artwork-item').forEach(item => {
+            item.addEventListener('click', function(e) {
+                // Create multiple brush strokes for click effect
+                for (let i = 0; i < 5; i++) {
+                    setTimeout(() => {
+                        const stroke = document.createElement('div');
+                        stroke.style.cssText = `
+                            position: fixed;
+                            top: ${e.clientY + (Math.random() - 0.5) * 20}px;
+                            left: ${e.clientX + (Math.random() - 0.5) * 20}px;
+                            width: ${Math.random() * 8 + 4}px;
+                            height: ${Math.random() * 8 + 4}px;
+                            background: var(--primary-amber);
+                            border-radius: 50%;
+                            pointer-events: none;
+                            z-index: 9999;
+                            opacity: 0.8;
+                            animation: brushFade 1s ease-out forwards;
+                        `;
+                        document.body.appendChild(stroke);
+                        
+                        setTimeout(() => {
+                            if (stroke.parentNode) {
+                                stroke.remove();
+                            }
+                        }, 1000);
+                    }, i * 50);
+                }
+            });
+        });
+
+        // Change cursor on different sections for enhanced artistic effect
+        const sections = document.querySelectorAll('section');
+        sections.forEach(section => {
+            section.addEventListener('mouseenter', function() {
+                const sectionId = this.id;
+                if (sectionId === 'gallery') {
+                    document.body.style.cursor = `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="%23d4830a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="3" height="3" x="11" y="18" rx="2" ry="2"/><rect width="3" height="3" x="11" y="5" rx="2" ry="2"/><path d="m19 12-7 7-7-7"/></svg>') 16 16, auto`;
+                } else if (sectionId === 'process') {
+                    document.body.style.cursor = `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="%23d4830a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v6m0 6v6"/><path d="m15.14 8.86-4.28 4.28m0-4.28 4.28 4.28"/><path d="M16.5 7.5 19 5l2 2-2.5 2.5"/><path d="m15 15 4 4 2-2-4-4"/></svg>') 14 14, auto`;
+                }
+            });
+            
+            section.addEventListener('mouseleave', function() {
+                document.body.style.cursor = '';
+            });
+        });
+
+        // Add paint splatter effect on CTA button click
+        document.querySelector('.cta-button').addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Create paint splatter effect
+            for (let i = 0; i < 8; i++) {
+                setTimeout(() => {
+                    const splatter = document.createElement('div');
+                    const size = Math.random() * 12 + 6;
+                    const angle = (Math.PI * 2 * i) / 8;
+                    const distance = Math.random() * 40 + 20;
+                    
+                    splatter.style.cssText = `
+                        position: fixed;
+                        top: ${e.clientY + Math.sin(angle) * distance}px;
+                        left: ${e.clientX + Math.cos(angle) * distance}px;
+                        width: ${size}px;
+                        height: ${size}px;
+                        background: var(--warm-orange);
+                        border-radius: ${Math.random() > 0.5 ? '50%' : '30%'};
+                        pointer-events: none;
+                        z-index: 9999;
+                        opacity: 0.7;
+                        animation: brushFade 1.5s ease-out forwards;
+                    `;
+                    document.body.appendChild(splatter);
+                    
+                    setTimeout(() => {
+                        if (splatter.parentNode) {
+                            splatter.remove();
+                        }
+                    }, 1500);
+                }, i * 30);
             }
-        `;
-        document.head.appendChild(cursorStyle);
+            
+            // Navigate after effect
+            setTimeout(() => {
+                document.querySelector('#gallery').scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }, 200);
+        });
     </script>
 </body>
 </html>
